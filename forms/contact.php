@@ -1,41 +1,57 @@
 <?php
-  /**
-  * Requires the "PHP Email Form" library
-  * The "PHP Email Form" library is available only in the pro version of the template
-  * The library should be uploaded to: vendor/php-email-form/php-email-form.php
-  * For more info and help: https://bootstrapmade.com/php-email-form/
-  */
 
-  // Replace contact@example.com with your real receiving email address
-  $receiving_email_address = 'contact@example.com';
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\SMTP;
+use PHPMailer\PHPMailer\Exception;
 
-  if( file_exists($php_email_form = '../assets/vendor/php-email-form/php-email-form.php' )) {
-    include( $php_email_form );
-  } else {
-    die( 'Unable to load the "PHP Email Form" Library!');
-  }
+// **PENTING**: Pastikan Anda sudah mengunduh PHPMailer dan meletakkannya di direktori yang benar.
+require '../vendor/phpmailer/src/Exception.php';
+require '../vendor/phpmailer/src/PHPMailer.php';
+require '../vendor/phpmailer/src/SMTP.php';
 
-  $contact = new PHP_Email_Form;
-  $contact->ajax = true;
-  
-  $contact->to = $receiving_email_address;
-  $contact->from_name = $_POST['name'];
-  $contact->from_email = $_POST['email'];
-  $contact->subject = $_POST['subject'];
+// Cek jika form telah disubmit
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $mail = new PHPMailer(true);
 
-  // Uncomment below code if you want to use SMTP to send emails. You need to enter your correct SMTP credentials
-  /*
-  $contact->smtp = array(
-    'host' => 'example.com',
-    'username' => 'example',
-    'password' => 'pass',
-    'port' => '587'
-  );
-  */
+    try {
+        // Pengaturan Server
+        // **PENTING**: Ganti dengan pengaturan SMTP Anda sendiri.
+        $mail->isSMTP();
+        $mail->Host       = 'smtp.example.com';       // Ganti dengan server SMTP Anda
+        $mail->SMTPAuth   = true;
+        $mail->Username   = 'user@example.com';     // Ganti dengan username SMTP Anda
+        $mail->Password   = 'password';             // Ganti dengan password SMTP Anda
+        $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS;
+        $mail->Port       = 465;                      // Port TCP, gunakan 587 jika SMPSecure adalah ENCRYPTION_STARTTLS
 
-  $contact->add_message( $_POST['name'], 'From');
-  $contact->add_message( $_POST['email'], 'Email');
-  $contact->add_message( $_POST['message'], 'Message', 10);
+        // Penerima
+        // **PENTING**: Ganti dengan alamat email penerima Anda.
+        $receiving_email_address = 'penerima@example.com';
+        $mail->setFrom($_POST['email'], $_POST['name']);
+        $mail->addAddress($receiving_email_address);
 
-  echo $contact->send();
+        // Konten Email
+        $mail->isHTML(true);
+        $mail->Subject = 'Pesan Baru dari Formulir Kontak: ' . htmlspecialchars($_POST['subject']);
+        $mail->Body    = 'Anda menerima pesan baru dari formulir kontak website Anda.<br><br>' .
+                         '<b>Nama:</b> ' . htmlspecialchars($_POST['name']) . '<br>' .
+                         '<b>Email:</b> ' . htmlspecialchars($_POST['email']) . '<br>' .
+                         '<b>Subjek:</b> ' . htmlspecialchars($_POST['subject']) . '<br>' .
+                         '<b>Pesan:</b><br>' . nl2br(htmlspecialchars($_POST['message']));
+        $mail->AltBody = 'Anda menerima pesan baru dari formulir kontak website Anda.\n\n' .
+                         'Nama: ' . htmlspecialchars($_POST['name']) . '\n' .
+                         'Email: ' . htmlspecialchars($_POST['email']) . '\n' .
+                         'Subjek: ' . htmlspecialchars($_POST['subject']) . '\n' .
+                         'Pesan:\n' . htmlspecialchars($_POST['message']);
+
+        $mail->send();
+        echo 'OK';
+    } catch (Exception $e) {
+        http_response_code(500);
+        echo "Pesan tidak dapat dikirim. Mailer Error: {$mail->ErrorInfo}";
+    }
+} else {
+    http_response_code(403);
+    echo "Terjadi masalah dengan pengiriman Anda, silakan coba lagi.";
+}
 ?>

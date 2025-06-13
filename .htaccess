@@ -1,0 +1,13 @@
+RewriteEngine On
+
+# Error Documents
+ErrorDocument 404 /pages/404.php
+ErrorDocument 500 /pages/error.php
+
+# Redirect to public pages without .php
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.*)$ pages/$1.php [L]
+
+# Redirect root to index.php
+RewriteRule ^$ index.php [L]
