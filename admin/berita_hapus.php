@@ -23,10 +23,10 @@ if ($result && $row = $result->fetch_assoc()) {
 }
 $stmt->close();
 // Hapus berita
-db = $conn->prepare("DELETE FROM berita WHERE id=?");
-db->bind_param('i', $id);
-db->execute();
-db->close();
+$db = $conn->prepare("DELETE FROM berita WHERE id=?");
+$db->bind_param('i', $id);
+$db->execute();
+$db->close();
 header('Location: berita.php');
 exit();
 
