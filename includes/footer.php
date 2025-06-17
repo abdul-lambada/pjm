@@ -1,5 +1,4 @@
-  <footer id="footer" class="footer position-relative light-background">
-
+  <footer id="footer" class="footer bg-white position-relative py-5">
     <div class="container footer-top">
       <div class="row gy-4">
         <div class="col-lg-4 col-md-6 footer-about">
@@ -12,11 +11,11 @@
             <p class="mt-3"><strong>Phone:</strong> <span>(0536) 3226305</span></p>
             <p><strong>Email:</strong> <span>prohabajaya.mandiri@gmail.com</span></p>
           </div>
-          <div class="social-links d-flex mt-4">
-            <a href=""><i class="bi bi-twitter"></i></a>
-            <a href=""><i class="bi bi-facebook"></i></a>
-            <a href=""><i class="bi bi-instagram"></i></a>
-            <a href=""><i class="bi bi-linkedin"></i></a>
+          <div class="social-links d-flex align-items-center gap-3 mt-4">
+            <a href="#" class="text-secondary fs-5" aria-label="Twitter" target="_blank"><i class="bi bi-twitter"></i></a>
+            <a href="#" class="text-secondary fs-5" aria-label="Facebook" target="_blank"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="text-secondary fs-5" aria-label="Instagram" target="_blank"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="text-secondary fs-5" aria-label="LinkedIn" target="_blank"><i class="bi bi-linkedin"></i></a>
           </div>
         </div>
 

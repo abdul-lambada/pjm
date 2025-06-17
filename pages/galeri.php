@@ -11,20 +11,25 @@ ob_start();
 <main class="main">
 
     <!-- Portfolio Section -->
-    <section id="portfolio" class="portfolio section">
+    <section id="portfolio" class="portfolio section py-5">
+
+      <div class="container section-title" data-aos="fade-up">
+        <h2 class="text-gradient">Galeri Proyek</h2>
+        <p>Jelajahi dokumentasi visual proyek-proyek unggulan kami di berbagai sektor.</p>
+      </div>
 
       <div class="container">
 
         <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
 
-          <ul class="portfolio-filters isotope-filters" data-aos="fade-up" data-aos-delay="100">
-            <li data-filter="*" class="filter-active">Semua</li>
-            <li data-filter=".filter-construction">Konstruksi</li>
-            <li data-filter=".filter-infrastructure">Infrastruktur</li>
-            <li data-filter=".filter-workshop">Workshop</li>
+          <ul class="portfolio-filters isotope-filters d-flex justify-content-center flex-wrap gap-2 mb-4" data-aos="fade-up" data-aos-delay="100">
+            <li data-filter="*" class="filter-active btn btn-sm btn-outline-primary rounded-pill active">Semua</li>
+            <li data-filter=".filter-construction" class="btn btn-sm btn-outline-primary rounded-pill">Konstruksi</li>
+            <li data-filter=".filter-infrastructure" class="btn btn-sm btn-outline-primary rounded-pill">Infrastruktur</li>
+            <li data-filter=".filter-workshop" class="btn btn-sm btn-outline-primary rounded-pill">Workshop</li>
           </ul><!-- End Portfolio Filters -->
 
-          <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
+          <div class="row gy-5 isotope-container" data-aos="fade-up" data-aos-delay="200">
 
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-workshop">
               <img src="/pjm/assets/img/new/c.jpg" class="img-fluid" alt="">
@@ -33,7 +38,8 @@ ob_start();
                 <p>Site BIB</p>
                 <a href="/pjm/assets/img/new/c.jpg" title="Pembangunan Open Storage" data-gallery="portfolio-gallery-workshop" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
               </div>
-            </div><!-- End Portfolio Item -->
+            </div>
+            <!-- End Portfolio Item -->
 
             <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-workshop">
               <img src="/pjm/assets/img/new/b.jpg" class="img-fluid" alt="">

@@ -1,136 +1,158 @@
-/**
-* Template Name: Mentor
-* Template URL: https://bootstrapmade.com/mentor-free-education-bootstrap-theme/
-* Updated: Aug 07 2024 with Bootstrap v5.3.3
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
+/* =============================================================
+   PROHABA JAYA MANDIRI – Global Script
+   Author: Cascade AI – 2025-06-17
+   Description: Modern, interactive & responsive enhancements.
+   ==============================================================*/
 
-(function() {
+(() => {
   "use strict";
 
-  /**
-   * Apply .scrolled class to the body as the page is scrolled down
-   */
-  function toggleScrolled() {
-    const selectBody = document.querySelector('body');
-    const selectHeader = document.querySelector('#header');
-    if (!selectHeader.classList.contains('scroll-up-sticky') && !selectHeader.classList.contains('sticky-top') && !selectHeader.classList.contains('fixed-top')) return;
-    window.scrollY > 100 ? selectBody.classList.add('scrolled') : selectBody.classList.remove('scrolled');
-  }
-
-  document.addEventListener('scroll', toggleScrolled);
-  window.addEventListener('load', toggleScrolled);
-
-  /**
-   * Mobile nav toggle
-   */
-  const mobileNavToggleBtn = document.querySelector('.mobile-nav-toggle');
-
-  function mobileNavToogle() {
-    document.querySelector('body').classList.toggle('mobile-nav-active');
-    mobileNavToggleBtn.classList.toggle('bi-list');
-    mobileNavToggleBtn.classList.toggle('bi-x');
-  }
-  mobileNavToggleBtn.addEventListener('click', mobileNavToogle);
-
-  /**
-   * Hide mobile nav on same-page/hash links
-   */
-  document.querySelectorAll('#navmenu a').forEach(navmenu => {
-    navmenu.addEventListener('click', () => {
-      if (document.querySelector('.mobile-nav-active')) {
-        mobileNavToogle();
-      }
-    });
-
-  });
-
-  /**
-   * Toggle mobile nav dropdowns
-   */
-  document.querySelectorAll('.navmenu .toggle-dropdown').forEach(navmenu => {
-    navmenu.addEventListener('click', function(e) {
-      e.preventDefault();
-      this.parentNode.classList.toggle('active');
-      this.parentNode.nextElementSibling.classList.toggle('dropdown-active');
-      e.stopImmediatePropagation();
-    });
-  });
-
-  /**
-   * Preloader
-   */
-  const preloader = document.querySelector('#preloader');
-  if (preloader) {
-    window.addEventListener('load', () => {
-      preloader.remove();
-    });
-  }
-
-  /**
-   * Scroll top button
-   */
-  let scrollTop = document.querySelector('.scroll-top');
-
-  function toggleScrollTop() {
-    if (scrollTop) {
-      window.scrollY > 100 ? scrollTop.classList.add('active') : scrollTop.classList.remove('active');
+  /*==============================
+  Helpers
+  ==============================*/
+  const body = document.body;
+  const select = (el, all = false) => all ? [...document.querySelectorAll(el)] : document.querySelector(el);
+  const on = (type, el, listener, all = false) => {
+    const elements = select(el, all);
+    if (elements) {
+      all ? elements.forEach(e => e.addEventListener(type, listener)) : elements.addEventListener(type, listener);
     }
-  }
-  scrollTop.addEventListener('click', (e) => {
+  };
+
+  /*==============================
+  Header shadow on scroll
+  ==============================*/
+  const header = select(".header, #header");
+  const setHeaderShadow = () => {
+    if (!header) return;
+    window.scrollY > 100 ? body.classList.add("scrolled") : body.classList.remove("scrolled");
+  };
+  window.addEventListener("load", setHeaderShadow);
+  document.addEventListener("scroll", setHeaderShadow);
+
+  /*==============================
+  Mobile nav toggle
+  ==============================*/
+  const navToggle = select(".mobile-nav-toggle");
+  on("click", ".mobile-nav-toggle", () => {
+    body.classList.toggle("mobile-nav-active");
+    navToggle.classList.toggle("bi-list");
+    navToggle.classList.toggle("bi-x");
+  });
+
+  /* Close mobile nav when a link is clicked */
+  on("click", "#navmenu a", () => {
+    if (body.classList.contains("mobile-nav-active")) {
+      body.classList.remove("mobile-nav-active");
+      navToggle.classList.toggle("bi-list");
+      navToggle.classList.toggle("bi-x");
+    }
+  }, true);
+
+  /*==============================
+  Scroll-top button
+  ==============================*/
+  const scrollTopBtn = select(".scroll-top");
+  const toggleScrollTop = () => {
+    if (!scrollTopBtn) return;
+    scrollTopBtn.classList.toggle("active", window.scrollY > 200);
+  };
+  window.addEventListener("load", toggleScrollTop);
+  document.addEventListener("scroll", toggleScrollTop);
+  on("click", ".scroll-top", e => {
     e.preventDefault();
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
-    });
+    window.scrollTo({ top: 0, behavior: "smooth" });
   });
 
-  window.addEventListener('load', toggleScrollTop);
-  document.addEventListener('scroll', toggleScrollTop);
+  /*==============================
+  AOS init or graceful fallback
+  ==============================*/
+  const initAOS = () => {
+    if (typeof AOS !== "undefined") {
+      AOS.init({ duration: 600, easing: "ease-out-cubic", once: true });
+    } else {
+      // Lightweight fade-up fallback
+      const els = select("[data-aos]", true);
+      const io = new IntersectionObserver(entries => {
+        entries.forEach(ent => {
+          if (ent.isIntersecting) {
+            ent.target.classList.add("aos-animate");
+            io.unobserve(ent.target);
+          }
+        });
+      }, { threshold: 0.2 });
+      els.forEach(el => io.observe(el));
+    }
+  };
+  window.addEventListener("load", initAOS);
 
-  /**
-   * Animation on scroll function and init
-   */
-  function aosInit() {
-    AOS.init({
-      duration: 600,
-      easing: 'ease-in-out',
-      once: true,
-      mirror: false
-    });
+  /*==============================
+  Bootstrap tooltips
+  ==============================*/
+  if (typeof bootstrap !== "undefined") {
+    select('[data-bs-toggle="tooltip"]', true).forEach(el => new bootstrap.Tooltip(el));
   }
-  window.addEventListener('load', aosInit);
 
-  /**
-   * Initiate glightbox
-   */
-  const glightbox = GLightbox({
-    selector: '.glightbox'
-  });
+  /*==============================
+  PureCounter re-initialisation (if present)
+  ==============================*/
+  if (typeof PureCounter !== "undefined") {
+    new PureCounter();
+  }
 
-  /**
-   * Initiate Pure Counter
-   */
-  new PureCounter();
+  /*==============================
+  Swiper initialisation for any .init-swiper elements
+  ==============================*/
+  const initSwipers = () => {
+    if (typeof Swiper === "undefined") return;
+    select(".init-swiper", true).forEach(swiperEl => {
+      const configEl = swiperEl.querySelector(".swiper-config");
+      if (!configEl) return;
+      const config = JSON.parse(configEl.textContent.trim());
+      new Swiper(swiperEl, config);
+    });
+  };
+  window.addEventListener("load", initSwipers);
 
-  /**
-   * Init swiper sliders
-   */
-  function initSwiper() {
-    document.querySelectorAll(".init-swiper").forEach(function(swiperElement) {
-      let config = JSON.parse(
-        swiperElement.querySelector(".swiper-config").innerHTML.trim()
-      );
-
-      if (swiperElement.classList.contains("swiper-tab")) {
-        initSwiperWithCustomPagination(swiperElement, config);
-      } else {
-        new Swiper(swiperElement, config);
+  /*==============================
+  Activate nav links on scroll (simple scrollspy)
+  ==============================*/
+  const sections = select("section[id]", true);
+  const navLinks = select("#navmenu a[href^='#']", true);
+  const activateNav = () => {
+    const pos = window.scrollY + 200;
+    sections.forEach(sec => {
+      if (pos >= sec.offsetTop && pos <= sec.offsetTop + sec.offsetHeight) {
+        navLinks.forEach(l => l.classList.remove("active"));
+        const link = select(`#navmenu a[href='#${sec.id}']`);
+        if (link) link.classList.add("active");
       }
     });
+  };
+  window.addEventListener("scroll", activateNav);
+
+  /*==============================
+  Hero slide counter
+  ==============================*/
+  const heroCarousel = select('#heroCarousel');
+  if (heroCarousel && typeof bootstrap !== 'undefined') {
+    const totalSlides = heroCarousel.querySelectorAll('.carousel-item').length;
+    const counterEl   = heroCarousel.querySelector('.slide-counter');
+    const updateCounter = (e) => {
+      const idx = e.to !== undefined ? e.to : 0;
+      if (counterEl) counterEl.textContent = `${idx + 1} / ${totalSlides}`;
+    };
+    heroCarousel.addEventListener('slid.bs.carousel', updateCounter);
+    // Set initial count after load
+    window.addEventListener('load', () => updateCounter({ to: heroCarousel.querySelector('.carousel-item.active')?.dataset.bsSlideTo || 0 }));
   }
 
-  window.addEventListener("load", initSwiper);
-
+  /*==============================
+  jQuery Preloader FadeOut
+  ==============================*/
+  if (typeof window.jQuery !== "undefined") {
+    jQuery(window).on('load', function () {
+      jQuery('#preloader').fadeOut(400, function () { jQuery(this).remove(); });
+    });
+  }
 })();

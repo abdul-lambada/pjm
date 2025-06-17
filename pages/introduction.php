@@ -13,7 +13,7 @@ ob_start();
     <!-- About Section -->
     <section id="about" class="about section">
       <div class="container">
-        <div class="row gy-4 align-items-center">
+        <div class="row gy-5 align-items-center">
           <div class="col-lg-6 content" data-aos="fade-up" data-aos-delay="100">
             <h3>PT. PROHABA JAYA MANDIRI</h3>
             <p class="fst-italic">
@@ -107,6 +107,54 @@ ob_start();
         </div>
       </div>
     </section><!-- /Stats Section -->
+
+    <!-- FAQ Section -->
+    <section id="faq" class="section faq light-background">
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Pertanyaan Umum</h2>
+        <p>Informasi singkat mengenai layanan dan proses kerja kami.</p>
+      </div>
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="accordion accordion-flush" id="faqAccordion">
+          <div class="accordion-item">
+            <h3 class="accordion-header" id="faq-heading-1">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-collapse-1" aria-expanded="false" aria-controls="faq-collapse-1">
+                Bagaimana cara PROHABA memastikan kualitas proyek?
+              </button>
+            </h3>
+            <div id="faq-collapse-1" class="accordion-collapse collapse" aria-labelledby="faq-heading-1" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">
+                Kami menerapkan Sistem Manajemen Mutu ISO 9001:2015 dan melakukan inspeksi kualitas di setiap tahap proyek untuk memastikan standar tertinggi terpenuhi.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h3 class="accordion-header" id="faq-heading-2">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-collapse-2" aria-expanded="false" aria-controls="faq-collapse-2">
+                Apakah perusahaan menyediakan konsultasi gratis?
+              </button>
+            </h3>
+            <div id="faq-collapse-2" class="accordion-collapse collapse" aria-labelledby="faq-heading-2" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">
+                Ya, kami menyediakan konsultasi awal gratis untuk memahami kebutuhan klien dan menawarkan solusi terbaik sebelum memulai proyek.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <h3 class="accordion-header" id="faq-heading-3">
+              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-collapse-3" aria-expanded="false" aria-controls="faq-collapse-3">
+                Bagaimana PROHABA menjaga keselamatan kerja di lapangan?
+              </button>
+            </h3>
+            <div id="faq-collapse-3" class="accordion-collapse collapse" aria-labelledby="faq-heading-3" data-bs-parent="#faqAccordion">
+              <div class="accordion-body">
+                Kami menerapkan Sistem Manajemen K3 ISO 45001:2018, pelatihan rutin, dan audit keselamatan berkala untuk memastikan lingkungan kerja yang aman bagi semua.
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section><!-- /FAQ Section -->
 
 </main>
 

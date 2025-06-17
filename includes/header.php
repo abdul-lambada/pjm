@@ -44,7 +44,7 @@
       <a href="/pjm/index.php" class="logo d-flex align-items-center me-auto">
         <!-- Uncomment the line below if you also wish to use an image logo -->
         <img src="/pjm/assets/img/title.png" alt="Prohaba Jaya Mandiri">
-        <h1 class="sitename">Prohaba <br> Jaya Mandiri</h1>
+        <h1 class="sitename">Prohaba Jaya Mandiri</h1>
       </a>
 
       <?php
