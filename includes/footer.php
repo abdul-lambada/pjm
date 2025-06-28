@@ -61,7 +61,8 @@
   <script src="/pjm/assets/vendor/glightbox/js/glightbox.min.js"></script>
   <script src="/pjm/assets/vendor/purecounter/purecounter_vanilla.js"></script>
   <script src="/pjm/assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <script src="/pjm/assets/vendor/isotope-layout/isotope.pkgd.min.js"></script>
+  <!-- Isotope JS (CDN since local file missing) -->
+  <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
 
   <!-- Slick Carousel JS -->
   <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>

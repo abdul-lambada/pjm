@@ -1,4 +1,9 @@
 <?php
+/**
+ * Deprecated: This file is no longer used. All navigation markup
+ * now resides in includes/header.php. Kept for reference.
+ */
+ exit;
 // Navigation Bar
 ?>
 <nav>

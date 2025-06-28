@@ -1,102 +1,146 @@
-<!-- Sidebar Offcanvas (Mobile Only) -->
-<div id="sidebarOffcanvas" class="offcanvas offcanvas-start d-md-none" tabindex="-1" aria-labelledby="sidebarLabel">
-    <div class="offcanvas-header">
-        <h5 class="offcanvas-title" id="sidebarLabel">Menu</h5>
-        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-    </div>
-    <div class="offcanvas-body p-0 d-flex flex-column">
-        <a href="/pjm/admin/dashboard.php" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-decoration-none">
-            <img src="<?= $_SESSION['admin_avatar'] ?? '/pjm/assets/img/default-avatar.png' ?>" alt="Avatar" class="rounded-circle me-2" style="width: 32px; height: 32px; object-fit: cover;" onerror="this.onerror=null;this.src='/pjm/assets/img/default-avatar.png';">
-            <span class="fs-5"><?= $_SESSION['admin_username'] ?? 'Admin' ?></span>
+<!-- Sidebar -->
+<nav id="sidebar" class="sidebar">
+    <div class="sidebar-header">
+        <a class="sidebar-brand d-flex align-items-center justify-content-center" href="../dashboard.php">
+            <div class="sidebar-brand-icon">
+                <i class="fas fa-home"></i>
+            </div>
+            <div class="sidebar-brand-text mx-3">PJM Admin</div>
         </a>
-        <hr>
-        <ul class="nav nav-pills flex-column mb-auto">
-            <li class="nav-item">
-                <a href="/pjm/admin/dashboard.php" class="nav-link <?= basename($_SERVER['PHP_SELF']) == 'dashboard.php' ? 'active' : '' ?>">
-                    <i class="bi bi-speedometer2 me-2"></i>
-                    Dashboard
-                </a>
-            </li>
-            <li>
-                <a href="/pjm/admin/berita.php" class="nav-link <?= basename($_SERVER['PHP_SELF']) == 'berita.php' ? 'active' : '' ?>">
-                    <i class="bi bi-newspaper me-2"></i>
-                    Berita
-                </a>
-            </li>
-            <li>
-                <a href="/pjm/admin/proyek.php" class="nav-link <?= basename($_SERVER['PHP_SELF']) == 'proyek.php' ? 'active' : '' ?>">
-                    <i class="bi bi-kanban me-2"></i>
-                    Proyek
-                </a>
-            </li>
-            <li>
-                <a href="/pjm/admin/galeri.php" class="nav-link <?= basename($_SERVER['PHP_SELF']) == 'galeri.php' ? 'active' : '' ?>">
-                    <i class="bi bi-images me-2"></i>
-                    Galeri
-                </a>
-            </li>
-        </ul>
-        <hr>
-        <div class="dropdown">
-            <a href="#" class="d-flex align-items-center text-decoration-none dropdown-toggle" data-bs-toggle="dropdown">
-                <img src="<?= $_SESSION['admin_avatar'] ?? '/pjm/assets/img/default-avatar.png' ?>" alt="Avatar" class="rounded-circle me-2" style="width: 32px; height: 32px; object-fit: cover;" onerror="this.onerror=null;this.src='/pjm/assets/img/default-avatar.png';">
-                <strong><?= $_SESSION['admin_username'] ?? 'Admin' ?></strong>
-            </a>
-            <ul class="dropdown-menu dropdown-menu-dark text-small shadow">
-                <li><a class="dropdown-item" href="/pjm/admin/profile.php">Profile</a></li>
-                <li><hr class="dropdown-divider"></li>
-                <li><a class="dropdown-item" href="/pjm/logout.php">Logout</a></li>
-            </ul>
-        </div>
     </div>
-</div>
 
-<!-- Sidebar Static (Desktop Only) -->
-<div id="sidebar" class="d-none d-md-flex flex-column flex-shrink-0 p-3 bg-white border-end" style="min-height:100vh; width:250px;">
-    <a href="/pjm/admin/dashboard.php" class="d-flex align-items-center mb-3 mb-md-0 me-md-auto text-decoration-none">
-        <img src="<?= $_SESSION['admin_avatar'] ?? '/pjm/assets/img/default-avatar.png' ?>" alt="Avatar" class="rounded-circle me-2" style="width: 32px; height: 32px; object-fit: cover;" onerror="this.onerror=null;this.src='/pjm/assets/img/default-avatar.png';">
-        <span class="fs-5"><?= $_SESSION['admin_username'] ?? 'Admin' ?></span>
-    </a>
-    <hr>
-    <ul class="nav nav-pills flex-column mb-auto">
-        <li class="nav-item">
-            <a href="/pjm/admin/dashboard.php" class="nav-link <?= basename($_SERVER['PHP_SELF']) == 'dashboard.php' ? 'active' : '' ?>">
-                <i class="bi bi-speedometer2 me-2"></i>
-                Dashboard
-            </a>
-        </li>
-        <li>
-            <a href="/pjm/admin/berita.php" class="nav-link <?= basename($_SERVER['PHP_SELF']) == 'berita.php' ? 'active' : '' ?>">
-            <a href="berita.php" class="nav-link <?= basename($_SERVER['PHP_SELF']) == 'berita.php' ? 'active' : '' ?>">
-                <i class="bi bi-newspaper me-2"></i>
-                Berita
-            </a>
-        </li>
-        <li>
-            <a href="proyek.php" class="nav-link <?= basename($_SERVER['PHP_SELF']) == 'proyek.php' ? 'active' : '' ?>">
-                <i class="bi bi-kanban me-2"></i>
-                Proyek
-            </a>
-        </li>
-        <li>
-            <a href="galeri.php" class="nav-link <?= basename($_SERVER['PHP_SELF']) == 'galeri.php' ? 'active' : '' ?>">
-                <i class="bi bi-images me-2"></i>
-                Galeri
-            </a>
-        </li>
-    </ul>
-    <hr>
-    <div class="dropdown">
-        <a href="#" class="d-flex align-items-center text-decoration-none dropdown-toggle" data-bs-toggle="dropdown">
-            <img src="<?= $_SESSION['admin_avatar'] ?? '/pjm/assets/img/default-avatar.png' ?>" alt="Avatar" class="rounded-circle me-2" style="width: 32px; height: 32px; object-fit: cover;" onerror="this.onerror=null;this.src='/pjm/assets/img/default-avatar.png';">
-            <strong><?= $_SESSION['admin_username'] ?? 'Admin' ?></strong>
-        </a>
-        <ul class="dropdown-menu dropdown-menu-dark text-small shadow">
-            <li><a class="dropdown-item" href="/pjm/admin/profile.php">Profile</a></li>
-            <li>
-                <hr class="dropdown-divider">
+    <?php
+    // Dapatkan path lengkap dan relatif
+    $current_path = isset($_SERVER['PHP_SELF']) ? $_SERVER['PHP_SELF'] : '';
+    $current_file = basename($current_path);
+    $current_dir = basename(dirname($current_path));
+    
+    // Fungsi untuk mengecek apakah menu aktif
+    function isActiveMenu($menu_path, $current_path) {
+        // Normalisasi path untuk perbandingan yang konsisten
+        $normalized_current = str_replace('\\', '/', strtolower($current_path));
+        $normalized_menu = str_replace('\\', '/', strtolower($menu_path));
+        
+        // Cek apakah path saat ini mengandung menu path
+        return (strpos($normalized_current, $normalized_menu) !== false);
+    }
+    
+    // Fungsi untuk membuat URL yang aman
+    function getMenuUrl($path) {
+        // Pastikan path dimulai dengan /
+        $path = '/' . ltrim($path, '/');
+        return htmlspecialchars($path, ENT_QUOTES, 'UTF-8');
+    }
+    ?>
+    
+    <div class="sidebar-content">
+        <ul class="nav flex-column">
+            <!-- Dashboard -->
+            <li class="nav-item <?= (strpos($current_path, 'dashboard.php') !== false) ? 'active' : '' ?>">
+                <a class="nav-link" href="<?= getMenuUrl('/pjm/admin/dashboard.php') ?>">
+                    <i class="fas fa-fw fa-tachometer-alt me-2"></i>
+                    <span>Dashboard</span>
+                </a>
             </li>
-            <li><a class="dropdown-item" href="/pjm/logout.php">Logout</a></li>
+
+            <!-- Divider -->
+            <li class="nav-divider">Konten</li>
+
+            <!-- Berita -->
+            <li class="nav-item <?= isActiveMenu('berita', $current_path) ? 'active' : '' ?>">
+                <a class="nav-link" href="<?= getMenuUrl('/pjm/admin/berita/berita.php') ?>">
+                    <i class="fas fa-fw fa-newspaper me-2"></i>
+                    <span>Berita</span>
+                </a>
+            </li>
+
+            <!-- Proyek -->
+            <li class="nav-item <?= isActiveMenu('proyek', $current_path) ? 'active' : '' ?>">
+                <a class="nav-link" href="<?= getMenuUrl('/pjm/admin/proyek.php') ?>">
+                    <i class="fas fa-fw fa-project-diagram me-2"></i>
+                    <span>Proyek</span>
+                </a>
+            </li>
+
+            <!-- Galeri -->
+            <li class="nav-item <?= isActiveMenu('galeri', $current_path) ? 'active' : '' ?>">
+                <a class="nav-link" href="<?= getMenuUrl('/pjm/admin/galeri/galeri.php') ?>">
+                    <i class="fas fa-fw fa-images me-2"></i>
+                    <span>Galeri</span>
+                </a>
+            </li>
+
+            <!-- Lowongan Kerja -->
+            <li class="nav-item <?= isActiveMenu('lowongan', $current_path) ? 'active' : '' ?>">
+                <a class="nav-link" href="<?= getMenuUrl('/pjm/admin/lowongan/lowongan.php') ?>">
+                    <i class="fas fa-fw fa-briefcase me-2"></i>
+                    <span>Lowongan Kerja</span>
+                </a>
+            </li>
+
+            <!-- Divider -->
+            <li class="nav-divider">Pengaturan</li>
+
+            <!-- Profil -->
+            <li class="nav-item <?= basename($_SERVER['PHP_SELF']) == 'profile.php' ? 'active' : '' ?>">
+                <a class="nav-link" href="../profile.php">
+                    <i class="fas fa-fw fa-user me-2"></i>
+                    <span>Profil</span>
+                </a>
+            </li>
+
+            <!-- Pengaturan -->
+            <li class="nav-item">
+                <a class="nav-link" data-bs-toggle="collapse" href="#collapsePages" role="button" aria-expanded="false" aria-controls="collapsePages">
+                    <i class="fas fa-fw fa-cog me-2"></i>
+                    <span>Pengaturan</span>
+                    <i class="fas fa-chevron-down float-end mt-1"></i>
+                </a>
+                <div class="collapse" id="collapsePages">
+                    <ul class="nav flex-column ms-4">
+                        <li class="nav-item">
+                            <span class="nav-link small text-muted">APLIKASI</span>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../pengaturan/umum.php">
+                                <i class="fas fa-fw fa-circle me-2"></i>
+                                <span>Umum</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../pengaturan/tampilan.php">
+                                <i class="fas fa-fw fa-circle me-2"></i>
+                                <span>Tampilan</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <span class="nav-link small text-muted">LAINNYA</span>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../pengaturan/backup.php">
+                                <i class="fas fa-fw fa-circle me-2"></i>
+                                <span>Backup Database</span>
+                            </a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="../pengaturan/log.php">
+                                <i class="fas fa-fw fa-circle me-2"></i>
+                                <span>Log Aktivitas</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+
         </ul>
     </div>
-</div>
+    
+    <!-- Sidebar Footer -->
+    <div class="sidebar-footer d-flex align-items-center justify-content-end p-3">
+        <button class="btn btn-sm btn-outline-light rounded-circle" id="sidebarToggle" aria-label="Toggle Sidebar">
+            <i class="fas fa-chevron-left toggle-icon"></i>
+            <i class="fas fa-chevron-right toggle-icon d-none"></i>
+        </button>
+    </div>
+</nav>
+<!-- End of Sidebar -->

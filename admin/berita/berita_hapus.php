@@ -4,7 +4,9 @@ if (!isset($_SESSION['admin_logged_in']) || $_SESSION['admin_logged_in'] !== tru
     header('Location: ../login.php');
     exit();
 }
-require_once '../includes/config.php';
+
+// Include konfigurasi database
+require_once __DIR__ . '/../../config.php';
 
 if (!isset($_GET['id']) || !is_numeric($_GET['id'])) {
     header('Location: berita.php');
@@ -17,8 +19,11 @@ $stmt->bind_param('i', $id);
 $stmt->execute();
 $result = $stmt->get_result();
 if ($result && $row = $result->fetch_assoc()) {
-    if ($row['gambar'] && file_exists('../assets/img/berita/'.$row['gambar'])) {
-        unlink('../assets/img/berita/'.$row['gambar']);
+    if (!empty($row['gambar'])) {
+        $gambar_path = __DIR__ . '/../../assets/img/berita/' . $row['gambar'];
+        if (file_exists($gambar_path)) {
+            unlink($gambar_path);
+        }
     }
 }
 $stmt->close();

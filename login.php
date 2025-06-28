@@ -53,7 +53,7 @@ try {
 }
 
 $pageTitle = 'Login Admin - Prohaba Jaya Mandiri';
-$content = '<div class="container py-5">
+$main_content = '<main class="main"><div class="container py-5">
   <div class="row justify-content-center">
     <div class="col-md-6 col-lg-4">
       <div class="card shadow">
@@ -90,6 +90,6 @@ $content = '<div class="container py-5">
       </div>
     </div>
   </div>
-</div>';
+</div></main>';
 
 include 'templates/public_template.php';

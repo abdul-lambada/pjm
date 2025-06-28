@@ -1,158 +1,157 @@
 /* =============================================================
-   PROHABA JAYA MANDIRI – Global Script
-   Author: Cascade AI – 2025-06-17
-   Description: Modern, interactive & responsive enhancements.
-   ==============================================================*/
+   PROHABA JAYA MANDIRI – Optimized Script
+   Author: Tim Pengembang – 2025-06-28
+   Description: Optimized JavaScript for better performance
+   =============================================================*/
 
-(() => {
-  "use strict";
+document.addEventListener('DOMContentLoaded', function() {
+  'use strict';
 
-  /*==============================
-  Helpers
-  ==============================*/
+  // Cache DOM elements
   const body = document.body;
-  const select = (el, all = false) => all ? [...document.querySelectorAll(el)] : document.querySelector(el);
-  const on = (type, el, listener, all = false) => {
-    const elements = select(el, all);
-    if (elements) {
-      all ? elements.forEach(e => e.addEventListener(type, listener)) : elements.addEventListener(type, listener);
-    }
-  };
-
-  /*==============================
-  Header shadow on scroll
-  ==============================*/
-  const header = select(".header, #header");
-  const setHeaderShadow = () => {
-    if (!header) return;
-    window.scrollY > 100 ? body.classList.add("scrolled") : body.classList.remove("scrolled");
-  };
-  window.addEventListener("load", setHeaderShadow);
-  document.addEventListener("scroll", setHeaderShadow);
-
-  /*==============================
-  Mobile nav toggle
-  ==============================*/
-  const navToggle = select(".mobile-nav-toggle");
-  on("click", ".mobile-nav-toggle", () => {
-    body.classList.toggle("mobile-nav-active");
-    navToggle.classList.toggle("bi-list");
-    navToggle.classList.toggle("bi-x");
-  });
-
-  /* Close mobile nav when a link is clicked */
-  on("click", "#navmenu a", () => {
-    if (body.classList.contains("mobile-nav-active")) {
-      body.classList.remove("mobile-nav-active");
-      navToggle.classList.toggle("bi-list");
-      navToggle.classList.toggle("bi-x");
-    }
-  }, true);
-
-  /*==============================
-  Scroll-top button
-  ==============================*/
-  const scrollTopBtn = select(".scroll-top");
-  const toggleScrollTop = () => {
-    if (!scrollTopBtn) return;
-    scrollTopBtn.classList.toggle("active", window.scrollY > 200);
-  };
-  window.addEventListener("load", toggleScrollTop);
-  document.addEventListener("scroll", toggleScrollTop);
-  on("click", ".scroll-top", e => {
-    e.preventDefault();
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  });
-
-  /*==============================
-  AOS init or graceful fallback
-  ==============================*/
-  const initAOS = () => {
-    if (typeof AOS !== "undefined") {
-      AOS.init({ duration: 600, easing: "ease-out-cubic", once: true });
+  const header = document.querySelector('.header');
+  const navToggle = document.querySelector('.mobile-nav-toggle');
+  const navMenu = document.querySelector('#navmenu');
+  const scrollTopBtn = document.querySelector('.scroll-top');
+  const preloader = document.getElementById('preloader');
+  
+  // Helper function to select elements
+  const $ = (selector, all = false) => 
+    all ? document.querySelectorAll(selector) : document.querySelector(selector);
+  
+  // Header scroll effect
+  function handleScroll() {
+    if (window.scrollY > 100) {
+      header.classList.add('scrolled');
     } else {
-      // Lightweight fade-up fallback
-      const els = select("[data-aos]", true);
-      const io = new IntersectionObserver(entries => {
-        entries.forEach(ent => {
-          if (ent.isIntersecting) {
-            ent.target.classList.add("aos-animate");
-            io.unobserve(ent.target);
-          }
-        });
-      }, { threshold: 0.2 });
-      els.forEach(el => io.observe(el));
+      header.classList.remove('scrolled');
     }
-  };
-  window.addEventListener("load", initAOS);
-
-  /*==============================
-  Bootstrap tooltips
-  ==============================*/
-  if (typeof bootstrap !== "undefined") {
-    select('[data-bs-toggle="tooltip"]', true).forEach(el => new bootstrap.Tooltip(el));
   }
-
-  /*==============================
-  PureCounter re-initialisation (if present)
-  ==============================*/
-  if (typeof PureCounter !== "undefined") {
-    new PureCounter();
+  
+  // Mobile menu toggle
+  function toggleMobileMenu() {
+    body.classList.toggle('mobile-nav-active');
+    navToggle.classList.toggle('bi-list');
+    navToggle.classList.toggle('bi-x');
   }
-
-  /*==============================
-  Swiper initialisation for any .init-swiper elements
-  ==============================*/
-  const initSwipers = () => {
-    if (typeof Swiper === "undefined") return;
-    select(".init-swiper", true).forEach(swiperEl => {
-      const configEl = swiperEl.querySelector(".swiper-config");
-      if (!configEl) return;
-      const config = JSON.parse(configEl.textContent.trim());
-      new Swiper(swiperEl, config);
-    });
-  };
-  window.addEventListener("load", initSwipers);
-
-  /*==============================
-  Activate nav links on scroll (simple scrollspy)
-  ==============================*/
-  const sections = select("section[id]", true);
-  const navLinks = select("#navmenu a[href^='#']", true);
-  const activateNav = () => {
-    const pos = window.scrollY + 200;
-    sections.forEach(sec => {
-      if (pos >= sec.offsetTop && pos <= sec.offsetTop + sec.offsetHeight) {
-        navLinks.forEach(l => l.classList.remove("active"));
-        const link = select(`#navmenu a[href='#${sec.id}']`);
-        if (link) link.classList.add("active");
-      }
-    });
-  };
-  window.addEventListener("scroll", activateNav);
-
-  /*==============================
-  Hero slide counter
-  ==============================*/
-  const heroCarousel = select('#heroCarousel');
-  if (heroCarousel && typeof bootstrap !== 'undefined') {
-    const totalSlides = heroCarousel.querySelectorAll('.carousel-item').length;
-    const counterEl   = heroCarousel.querySelector('.slide-counter');
-    const updateCounter = (e) => {
-      const idx = e.to !== undefined ? e.to : 0;
-      if (counterEl) counterEl.textContent = `${idx + 1} / ${totalSlides}`;
-    };
-    heroCarousel.addEventListener('slid.bs.carousel', updateCounter);
-    // Set initial count after load
-    window.addEventListener('load', () => updateCounter({ to: heroCarousel.querySelector('.carousel-item.active')?.dataset.bsSlideTo || 0 }));
+  
+  // Close mobile menu when clicking a link
+  function closeMobileMenu(e) {
+    if (e.target.matches('#navmenu a')) {
+      body.classList.remove('mobile-nav-active');
+      navToggle.classList.remove('bi-x');
+      navToggle.classList.add('bi-list');
+    }
   }
-
-  /*==============================
-  jQuery Preloader FadeOut
-  ==============================*/
-  if (typeof window.jQuery !== "undefined") {
-    jQuery(window).on('load', function () {
-      jQuery('#preloader').fadeOut(400, function () { jQuery(this).remove(); });
+  
+  // Scroll to top
+  function scrollToTop() {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
     });
   }
-})();
+  
+  // Toggle scroll to top button
+  function toggleScrollTop() {
+    if (window.scrollY > 300) {
+      scrollTopBtn.classList.add('active');
+    } else {
+      scrollTopBtn.classList.remove('active');
+    }
+  }
+  
+  // Initialize AOS if available
+  function initAOS() {
+    if (typeof AOS !== 'undefined') {
+      AOS.init({
+        duration: 600,
+        easing: 'ease-out-cubic',
+        once: true
+      });
+    }
+  }
+  
+  // Initialize carousel counters
+  function initCarouselCounters() {
+    const carousels = document.querySelectorAll('[data-carousel-counter]');
+    
+    carousels.forEach(carousel => {
+      const counter = carousel.querySelector('.slide-counter');
+      if (!counter) return;
+      
+      const totalSlides = carousel.querySelectorAll('.carousel-item').length;
+      
+      const updateCounter = (e) => {
+        const activeSlide = e?.to || Array.from(carousel.querySelectorAll('.carousel-item')).findIndex(el => el.classList.contains('active'));
+        counter.textContent = `${activeSlide + 1} / ${totalSlides}`;
+      };
+      
+      carousel.addEventListener('slid.bs.carousel', updateCounter);
+      updateCounter(); // Initial update
+    });
+  }
+  
+  // Smooth scroll for anchor links
+  function initSmoothScroll() {
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      if (anchor.getAttribute('href') === '#') return;
+      
+      anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if (target) {
+          window.scrollTo({
+            top: target.offsetTop - 80,
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+  }
+  
+  // Initialize tooltips if Bootstrap is available
+  function initTooltips() {
+    if (typeof bootstrap !== 'undefined') {
+      const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+      tooltipTriggerList.map(function (tooltipTriggerEl) {
+        return new bootstrap.Tooltip(tooltipTriggerEl);
+      });
+    }
+  }
+  
+  // Initialize all functions
+  function init() {
+    // Event listeners
+    if (navToggle) navToggle.addEventListener('click', toggleMobileMenu);
+    if (navMenu) navMenu.addEventListener('click', closeMobileMenu);
+    if (scrollTopBtn) scrollTopBtn.addEventListener('click', scrollToTop);
+    
+    // Scroll events
+    window.addEventListener('scroll', handleScroll);
+    window.addEventListener('scroll', toggleScrollTop);
+    
+    // Initialize components
+    initAOS();
+    initCarouselCounters();
+    initSmoothScroll();
+    initTooltips();
+    
+    // Initial states
+    handleScroll();
+    toggleScrollTop();
+    
+    // Remove preloader
+    if (preloader) {
+      window.addEventListener('load', function() {
+        setTimeout(() => {
+          preloader.style.opacity = '0';
+          setTimeout(() => preloader.remove(), 300);
+        }, 300);
+      });
+    }
+  }
+  
+  // Start initialization
+  init();
+});
