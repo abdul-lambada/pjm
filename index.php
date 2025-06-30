@@ -75,28 +75,34 @@ ob_start();
   <!-- ====================== End About Section ===================== -->
 
   <!-- ========================= Why Us ============================ -->
-  <section id="why-us" class="section bg-light py-5">
+  <section id="why-us" class="why-us section bg-light py-5">
     <div class="container">
       <div class="row gy-4">
-        <div class="col-lg-4" data-aos="fade-up">
-          <div class="icon-box text-center p-4 h-100">
-            <i class="bi bi-lightbulb fs-1 text-primary mb-3"></i>
-            <h4 class="mb-2">VISI</h4>
-            <p>Menjadi perusahaan terbaik di Indonesia dengan kejujuran, keikhlasan &amp; amanah.</p>
+        <div class="col-lg-4 col-md-6" data-aos="fade-up">
+          <div class="card whyus-card shadow-sm border-0 rounded-4 h-100 p-4 text-center">
+            <div class="whyus-icon mb-3 d-flex align-items-center justify-content-center mx-auto">
+              <i class="bi bi-lightbulb"></i>
+            </div>
+            <h5 class="fw-semibold mb-2">VISI</h5>
+            <p class="text-secondary small text-center mb-0">Menjadi perusahaan terbaik di Indonesia dengan kejujuran, keikhlasan &amp; amanah.</p>
           </div>
         </div>
-        <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
-          <div class="icon-box text-center p-4 h-100">
-            <i class="bi bi-bullseye fs-1 text-primary mb-3"></i>
-            <h4 class="mb-2">MISI</h4>
-            <p>Mengutamakan kepuasan pelanggan melalui produk bermutu tinggi sesuai permintaan.</p>
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+          <div class="card whyus-card shadow-sm border-0 rounded-4 h-100 p-4 text-center">
+            <div class="whyus-icon mb-3 d-flex align-items-center justify-content-center mx-auto">
+              <i class="bi bi-bullseye"></i>
+            </div>
+            <h5 class="fw-semibold mb-2">MISI</h5>
+            <p class="text-secondary small text-center mb-0">Mengutamakan kepuasan pelanggan melalui produk bermutu tinggi sesuai permintaan.</p>
           </div>
         </div>
-        <div class="col-lg-4" data-aos="fade-up" data-aos-delay="400">
-          <div class="icon-box text-center p-4 h-100">
-            <i class="bi bi-gem fs-1 text-primary mb-3"></i>
-            <h4 class="mb-2">VALUE</h4>
-            <p>Action, Accountable, Innovative, Optimal &amp; Neat.</p>
+        <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+          <div class="card whyus-card shadow-sm border-0 rounded-4 h-100 p-4 text-center">
+            <div class="whyus-icon mb-3 d-flex align-items-center justify-content-center mx-auto">
+              <i class="bi bi-gem"></i>
+            </div>
+            <h5 class="fw-semibold mb-2">VALUE</h5>
+            <p class="text-secondary small text-center mb-0">Action, Accountable, Innovative, Optimal &amp; Neat.</p>
           </div>
         </div>
       </div>

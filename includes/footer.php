@@ -1,51 +1,62 @@
-  <footer id="footer" class="footer bg-white position-relative py-5">
-    <div class="container footer-top">
-      <div class="row gy-4">
-        <div class="col-lg-4 col-md-6 footer-about">
-          <a href="/pjm/index.php" class="logo d-flex align-items-center">
-            <span class="sitename">Prohaba Jaya Mandiri</span>
-          </a>
-          <div class="footer-contact pt-3">
-            <p>Jl. G. Obos XV, Komp. Ruko 3G No. 2</p>
-            <p>Palangka Raya, Kalimantan Tengah</p>
-            <p class="mt-3"><strong>Phone:</strong> <span>(0536) 3226305</span></p>
-            <p><strong>Email:</strong> <span>prohabajaya.mandiri@gmail.com</span></p>
+  <footer id="footer" class="footer footer-modern position-relative py-3">
+    <div class="container">
+      <div class="row justify-content-center">
+        <div class="col-lg-12" data-aos="fade-up">
+          <div class="card border-0 shadow footer-card p-4 p-md-5 bg-gradient-modern">
+            <div class="d-flex flex-column flex-md-row align-items-stretch justify-content-between gap-4">
+              <!-- About & Contact -->
+              <div class="footer-about flex-fill text-md-start text-center d-flex flex-column justify-content-between">
+                <a href="/pjm/index.php" class="logo d-inline-flex align-items-center mb-2 mb-md-3 justify-content-md-start justify-content-center">
+                  <span class="sitename fs-4 fw-bold text-gradient">Prohaba Jaya Mandiri</span>
+                </a>
+                <div class="footer-contact mb-2 mb-md-3">
+                  <address class="mb-1">Jl. G. Obos XV, Komp. Ruko 3G No. 2</address>
+                  <address class="mb-1">Palangka Raya, Kalimantan Tengah</address>
+                  <p class="mb-1"><i class="bi bi-telephone me-2" aria-hidden="true"></i><strong class="visually-hidden">Phone:</strong> <a href="tel:+625363226305" class="text-decoration-none text-dark">(0536) 3226305</a></p>
+                  <p class="mb-1"><i class="bi bi-envelope me-2" aria-hidden="true"></i><strong class="visually-hidden">Email:</strong> <a href="mailto:prohabajaya.mandiri@gmail.com" class="text-decoration-none text-dark">prohabajaya.mandiri@gmail.com</a></p>
+                </div>
+                <div class="social-links d-flex justify-content-md-start justify-content-center gap-2 gap-md-3 mt-2">
+                  <a href="#" class="footer-social-link" aria-label="Twitter" target="_blank" rel="noopener"><i class="bi bi-twitter"></i></a>
+                  <a href="#" class="footer-social-link" aria-label="Facebook" target="_blank" rel="noopener"><i class="bi bi-facebook"></i></a>
+                  <a href="#" class="footer-social-link" aria-label="Instagram" target="_blank" rel="noopener"><i class="bi bi-instagram"></i></a>
+                  <a href="#" class="footer-social-link" aria-label="LinkedIn" target="_blank" rel="noopener"><i class="bi bi-linkedin"></i></a>
+                  <a href="mailto:prohabajaya.mandiri@gmail.com" class="footer-social-link" aria-label="Email"><i class="bi bi-envelope-at"></i></a>
+                </div>
+              </div>
+              <!-- Useful Links -->
+              <div class="footer-links flex-fill text-center text-md-start">
+                <h5 class="fw-semibold mb-3 d-flex align-items-center justify-content-center justify-content-md-start"><i class="bi bi-link-45deg me-2"></i>Useful Links</h5>
+                <ul class="list-unstyled mb-0">
+                  <li><a href="/pjm/index.php" class="footer-link">Beranda</a></li>
+                  <li><a href="/pjm/pages/introduction.php" class="footer-link">Tentang Kami</a></li>
+                  <li><a href="/pjm/pages/service.php" class="footer-link">Layanan</a></li>
+                  <li><a href="/pjm/pages/project.php" class="footer-link">Proyek</a></li>
+                  <li><a href="/pjm/pages/contact.php" class="footer-link">Kontak</a></li>
+                </ul>
+              </div>
+              <!-- Our Services -->
+              <div class="footer-services flex-fill text-center text-md-start">
+                <h5 class="fw-semibold mb-3 d-flex align-items-center justify-content-center justify-content-md-start"><i class="bi bi-tools me-2"></i>Our Services</h5>
+                <ul class="list-unstyled mb-0">
+                  <li><a href="#" class="footer-link">Konstruksi Bangunan</a></li>
+                  <li><a href="#" class="footer-link">Konstruksi Jalan</a></li>
+                  <li><a href="#" class="footer-link">Infrastruktur Listrik</a></li>
+                </ul>
+              </div>
+            </div>
           </div>
-          <div class="social-links d-flex align-items-center gap-3 mt-4">
-            <a href="#" class="text-secondary fs-5" aria-label="Twitter" target="_blank"><i class="bi bi-twitter"></i></a>
-            <a href="#" class="text-secondary fs-5" aria-label="Facebook" target="_blank"><i class="bi bi-facebook"></i></a>
-            <a href="#" class="text-secondary fs-5" aria-label="Instagram" target="_blank"><i class="bi bi-instagram"></i></a>
-            <a href="#" class="text-secondary fs-5" aria-label="LinkedIn" target="_blank"><i class="bi bi-linkedin"></i></a>
-          </div>
         </div>
-
-        <div class="col-lg-2 col-md-3 footer-links">
-          <h4>Useful Links</h4>
-          <ul>
-            <li><a href="/pjm/index.php">Beranda</a></li>
-            <li><a href="/pjm/pages/introduction.php">Tentang Kami</a></li>
-            <li><a href="/pjm/pages/service.php">Layanan</a></li>
-            <li><a href="/pjm/pages/project.php">Proyek</a></li>
-            <li><a href="/pjm/pages/contact.php">Kontak</a></li>
-          </ul>
+      </div>
+      </div>
+      <div class="row">
+        <div class="col-12 text-center">
+          <small class="text-secondary">&copy; <span id="copyright-year"></span> <strong class="sitename">Prohaba Jaya Mandiri</strong> All Rights Reserved. | <span class="text-gradient">Modern Footer UI</span></small>
         </div>
-
-        <div class="col-lg-2 col-md-3 footer-links">
-          <h4>Our Services</h4>
-          <ul>
-            <li><a href="#">Konstruksi Bangunan</a></li>
-            <li><a href="#">Konstruksi Jalan</a></li>
-            <li><a href="#">Infrastruktur Listrik</a></li>
-          </ul>
-        </div>
-
       </div>
     </div>
-
-    <div class="container copyright text-center mt-4">
-      <p>© <span>Copyright</span> <strong class="px-1 sitename">Prohaba Jaya Mandiri</strong> <span>All Rights Reserved</span></p>
-    </div>
-
+    <script>
+      document.getElementById('copyright-year').textContent = new Date().getFullYear();
+    </script>
   </footer>
 
   <!-- Scroll Top -->
@@ -116,6 +127,3 @@
       });
     });
   </script>
-  </body>
-
-  </html>

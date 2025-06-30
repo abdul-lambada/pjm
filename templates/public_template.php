@@ -1,19 +1,27 @@
 <?php
 /**
  * Template Halaman Publik Utama
- * File ini menggabungkan header, konten dinamis, dan footer.
+ * Best practice: Struktur HTML lengkap, modular, dan aman.
  */
+?>
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <?php require_once __DIR__ . '/../includes/head.php'; ?>
+</head>
+<body class="<?php echo (basename($_SERVER['SCRIPT_NAME']) === 'service.php') ? 'service-page' : 'index-page'; ?>">
+    <?php require_once __DIR__ . '/../includes/header.php'; ?>
 
-// Memuat header (termasuk navigasi dan semua tag <head>)
-require_once __DIR__ . '/../includes/header.php';
+    <?php
+    // Tampilkan konten utama, gunakan htmlspecialchars jika konten dari user
+    if (isset($main_content)) {
+        echo $main_content;
+    } else {
+        echo '<main class="main"><div class="container"><p>Konten tidak tersedia.</p></div></main>';
+    }
+    ?>
 
-// Menampilkan konten unik halaman yang di-passing melalui variabel $main_content
-if (isset($main_content)) {
-    echo $main_content;
-} else {
-    echo '<main class="main"><div class="container"><p>Konten tidak tersedia.</p></div></main>';
-}
-
-// Memuat footer (termasuk semua skrip JS)
-require_once __DIR__ . '/../includes/footer.php';
-
+    <?php require_once __DIR__ . '/../includes/footer.php'; ?>
+    <?php require_once __DIR__ . '/../includes/scripts.php'; ?>
+</body>
+</html>
