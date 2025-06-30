@@ -1,4 +1,37 @@
 <?php
+// ==========================================================
+// Helper utilities (URL builder & active menu detector)
+// ==========================================================
+if (!function_exists('getMenuUrl')) {
+    /**
+     * Buat URL aman berbasis root aplikasi.
+     * @param string $path  Path absolut (mulai dari /) atau relatif.
+     * @return string       HTML-safe URL.
+     */
+    function getMenuUrl(string $path): string {
+        $path = '/' . ltrim($path, '/');
+        return htmlspecialchars($path, ENT_QUOTES, 'UTF-8');
+    }
+}
+
+if (!function_exists('isActiveMenu')) {
+    /**
+     * Cek apakah $menu_path ada di path request saat ini.
+     * Digunakan untuk menandai menu aktif.
+     * @param string      $menu_path
+     * @param string|null $current_path  Jika null akan memakai $_SERVER['PHP_SELF'].
+     */
+    function isActiveMenu(string $menu_path, ?string $current_path = null): bool {
+        $current_path   = $current_path ?? ($_SERVER['PHP_SELF'] ?? '');
+        $normalized_cur = str_replace('\\', '/', strtolower($current_path));
+        $normalized_menu = str_replace('\\', '/', strtolower($menu_path));
+        return strpos($normalized_cur, $normalized_menu) !== false;
+    }
+}
+
+// ==========================================================
+// Existing helper / data functions below
+// ==========================================================
 // Fungsi untuk mendapatkan total proyek
 if (!function_exists('getTotalProjects')) {
     function getTotalProjects() {

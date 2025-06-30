@@ -1,13 +1,13 @@
 <!-- Navbar -->
 <nav class="navbar navbar-expand navbar-light bg-white border-bottom shadow-sm">
     <div class="container-fluid px-3">
-        <!-- Sidebar Toggle (Topbar) -->
-        <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle me-3 p-2" aria-label="Toggle sidebar">
+        <!-- Sidebar Toggle (Hamburger) hanya untuk mobile -->
+        <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle me-3 p-2" aria-label="Toggle sidebar" title="Buka/Tutup Sidebar">
             <i class="fas fa-bars"></i>
         </button>
 
         <!-- Brand (Visible on mobile) -->
-        <a class="navbar-brand d-md-none text-primary fw-bold" href="/pjm/admin/dashboard.php">
+        <a class="navbar-brand d-md-none text-primary fw-bold" href="<?= getMenuUrl('/pjm/admin/dashboard.php') ?>">
             PJM Admin
         </a>
 
@@ -46,12 +46,12 @@
                         <div class="small text-muted">Administrator</div>
                     </div>
                     <div class="position-relative">
-                        <img src="<?= htmlspecialchars($_SESSION['admin_avatar'] ?? '/pjm/assets/img/default-avatar.png') ?>" 
-                             class="rounded-circle" 
-                             width="40" 
-                             height="40" 
-                             alt="User"
-                             onerror="this.onerror=null;this.src='/pjm/assets/img/default-avatar.png';">
+                        <img src="<?= htmlspecialchars($_SESSION['admin_avatar'] ?? '/pjm/assets/img/default-avatar.png') ?>"
+                            class="rounded-circle"
+                            width="40"
+                            height="40"
+                            alt="User"
+                            onerror="this.onerror=null;this.src='/pjm/assets/img/default-avatar.png';">
                         <span class="position-absolute bottom-0 end-0 p-1 bg-success border border-white rounded-circle">
                             <span class="visually-hidden">Online</span>
                         </span>
@@ -61,12 +61,12 @@
                     <div class="dropdown-header bg-light">
                         <div class="d-flex align-items-center">
                             <div class="flex-shrink-0 me-3">
-                                <img src="<?= htmlspecialchars($_SESSION['admin_avatar'] ?? '/pjm/assets/img/default-avatar.png') ?>" 
-                                     class="rounded-circle" 
-                                     width="50" 
-                                     height="50" 
-                                     alt="User"
-                                     onerror="this.onerror=null;this.src='/pjm/assets/img/default-avatar.png';">
+                                <img src="<?= htmlspecialchars($_SESSION['admin_avatar'] ?? '/pjm/assets/img/default-avatar.png') ?>"
+                                    class="rounded-circle"
+                                    width="50"
+                                    height="50"
+                                    alt="User"
+                                    onerror="this.onerror=null;this.src='/pjm/assets/img/default-avatar.png';">
                             </div>
                             <div class="flex-grow-1">
                                 <h6 class="mb-0"><?= htmlspecialchars($_SESSION['admin_username'] ?? 'Admin') ?></h6>
@@ -75,7 +75,7 @@
                         </div>
                     </div>
                     <div class="dropdown-divider"></div>
-                    <a class="dropdown-item" href="profile.php">
+                    <a class="dropdown-item" href="<?= getMenuUrl('/pjm/admin/profile.php') ?>">
                         <i class="fas fa-user fa-fw me-2"></i> Profil Saya
                     </a>
                     <a class="dropdown-item" href="#">
@@ -85,9 +85,9 @@
                         <i class="fas fa-tasks fa-fw me-2"></i> Aktivitas
                     </a>
                     <div class="dropdown-divider"></div>
-                    <a class="dropdown-item text-danger" href="#" data-bs-toggle="modal" data-bs-target="#logoutModal">
+                    <button type="button" class="dropdown-item text-danger w-100 text-start" data-bs-toggle="modal" data-bs-target="#logoutModal" aria-label="Keluar" title="Keluar dari akun">
                         <i class="fas fa-sign-out-alt fa-fw me-2"></i> Keluar
-                    </a>
+                    </button>
                 </div>
             </li>
         </ul>
@@ -96,12 +96,12 @@
 <!-- End of Navbar -->
 
 <!-- Logout Modal-->
-<div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="logoutModalLabel" aria-hidden="true">
-    <div class="modal-dialog" role="document">
+<div class="modal fade" id="logoutModal" tabindex="-1" aria-labelledby="logoutModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="dialog" aria-modal="true">
         <div class="modal-content">
             <div class="modal-header border-0">
                 <h5 class="modal-title" id="logoutModalLabel">Konfirmasi Keluar</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Tutup"></button>
             </div>
             <div class="modal-body">
                 <p>Apakah Anda yakin ingin keluar dari akun Anda?</p>
@@ -109,7 +109,7 @@
             </div>
             <div class="modal-footer border-0">
                 <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">Batal</button>
-                <a href="logout.php" class="btn btn-danger">Ya, Keluar</a>
+                <a href="<?= getMenuUrl('/pjm/admin/logout.php') ?>" class="btn btn-danger" id="confirmLogoutBtn">Ya, Keluar</a>
             </div>
         </div>
     </div>

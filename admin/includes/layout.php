@@ -55,6 +55,7 @@
 
 <body class="bg-light">
     <!-- Page Wrapper -->
+    <!-- Page Wrapper -->
     <div id="wrapper" class="d-flex">
         <!-- Sidebar -->
         <?php include __DIR__.'/sidebar.php'; ?>

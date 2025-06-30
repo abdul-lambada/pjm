@@ -1,7 +1,7 @@
 <!-- Sidebar -->
 <nav id="sidebar" class="sidebar">
     <div class="sidebar-header">
-        <a class="sidebar-brand d-flex align-items-center justify-content-center" href="../dashboard.php">
+        <a class="sidebar-brand d-flex align-items-center justify-content-center" href="<?= getMenuUrl('/pjm/admin/dashboard.php') ?>">
             <div class="sidebar-brand-icon">
                 <i class="fas fa-home"></i>
             </div>
@@ -10,29 +10,18 @@
     </div>
 
     <?php
+    // Include global helper & db functions
+    require_once __DIR__ . '/functions.php';
     // Dapatkan path lengkap dan relatif
     $current_path = isset($_SERVER['PHP_SELF']) ? $_SERVER['PHP_SELF'] : '';
     $current_file = basename($current_path);
     $current_dir = basename(dirname($current_path));
-    
-    // Fungsi untuk mengecek apakah menu aktif
-    function isActiveMenu($menu_path, $current_path) {
-        // Normalisasi path untuk perbandingan yang konsisten
-        $normalized_current = str_replace('\\', '/', strtolower($current_path));
-        $normalized_menu = str_replace('\\', '/', strtolower($menu_path));
-        
-        // Cek apakah path saat ini mengandung menu path
-        return (strpos($normalized_current, $normalized_menu) !== false);
-    }
-    
-    // Fungsi untuk membuat URL yang aman
-    function getMenuUrl($path) {
-        // Pastikan path dimulai dengan /
-        $path = '/' . ltrim($path, '/');
-        return htmlspecialchars($path, ENT_QUOTES, 'UTF-8');
-    }
+
+
+
+
     ?>
-    
+
     <div class="sidebar-content">
         <ul class="nav flex-column">
             <!-- Dashboard -->
@@ -56,7 +45,7 @@
 
             <!-- Proyek -->
             <li class="nav-item <?= isActiveMenu('proyek', $current_path) ? 'active' : '' ?>">
-                <a class="nav-link" href="<?= getMenuUrl('/pjm/admin/proyek.php') ?>">
+                <a class="nav-link" href="<?= getMenuUrl('/pjm/admin/proyek/tambah_proyek.php') ?>">
                     <i class="fas fa-fw fa-project-diagram me-2"></i>
                     <span>Proyek</span>
                 </a>
@@ -134,10 +123,10 @@
 
         </ul>
     </div>
-    
+
     <!-- Sidebar Footer -->
     <div class="sidebar-footer d-flex align-items-center justify-content-end p-3">
-        <button class="btn btn-sm btn-outline-light rounded-circle" id="sidebarToggle" aria-label="Toggle Sidebar">
+        <button class="btn btn-sm btn-outline-light rounded-circle" id="sidebarToggle" aria-label="Toggle Sidebar" title="Buka/Tutup Sidebar">
             <i class="fas fa-chevron-left toggle-icon"></i>
             <i class="fas fa-chevron-right toggle-icon d-none"></i>
         </button>

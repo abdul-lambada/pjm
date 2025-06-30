@@ -1,6 +1,9 @@
 <?php
-require_once '../config.php';
-require_once '../includes/header.php';
+require_once __DIR__ . '/../../config.php';
+session_start();
+
+// Mulai output buffering
+ob_start();
 
 // Periksa sesi admin
 if (!isset($_SESSION['admin_logged_in'])) {
@@ -18,7 +21,7 @@ $result = mysqli_query($koneksi, $query);
     <a href="galeri_tambah.php" class="btn btn-primary mb-3">Tambah Galeri</a>
     
     <div class="table-responsive">
-        <table class="table table-bordered">
+        <table class="table table-bordered table-hover datatable" width="100%" cellspacing="0">
             <thead>
                 <tr>
                     <th>ID</th>
@@ -47,5 +50,7 @@ $result = mysqli_query($koneksi, $query);
 </div>
 
 <?php
-require_once '../includes/footer.php';
+$content = ob_get_clean();
+$title   = 'Kelola Galeri';
+require_once '../includes/layout.php';
 ?>

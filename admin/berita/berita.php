@@ -62,7 +62,7 @@ if (!isset($conn) || $conn->connect_error) {
                 $result = $conn->query("SELECT * FROM berita ORDER BY tanggal DESC");
                 if ($result && $result->num_rows > 0):
                 ?>
-                <table class="table table-bordered table-hover" id="dataTable" width="100%" cellspacing="0">
+                <table class="table table-bordered table-hover datatable" width="100%" cellspacing="0">
                     <thead class="bg-light">
                         <tr>
                             <th width="5%">No</th>
@@ -184,11 +184,11 @@ function pageScripts() {
         $('[data-toggle="tooltip"]').tooltip();
         
         // Inisialisasi DataTable
-        if ($.fn.DataTable.isDataTable('#dataTable')) {
-            $('#dataTable').DataTable().destroy();
+        if ($.fn.DataTable.isDataTable('.datatable')) {
+            $('.datatable').DataTable().destroy();
         }
         
-        var table = $('#dataTable').DataTable({
+        var table = $('.datatable').DataTable({
             "language": {
                 "url": "//cdn.datatables.net/plug-ins/1.10.24/i18n/Indonesian.json"
             },

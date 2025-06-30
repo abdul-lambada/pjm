@@ -201,28 +201,32 @@ function confirmDelete(event, formId) {
 
 // Initialize Summernote
 $(document).ready(function() {
-    $('.summernote').summernote({
-        height: 300,
-        minHeight: null,
-        maxHeight: null,
-        focus: true,
-        lang: 'id-ID',
-        toolbar: [
-            ['style', ['style']],
-            ['font', ['bold', 'underline', 'clear']],
-            ['fontname', ['fontname']],
-            ['color', ['color']],
-            ['para', ['ul', 'ol', 'paragraph']],
-            ['table', ['table']],
-            ['insert', ['link', 'picture', 'video']],
-            ['view', ['fullscreen', 'codeview', 'help']],
-        ],
-        callbacks: {
-            onImageUpload: function(files) {
-                uploadImage(files[0], this);
+    if (typeof $.fn.summernote !== 'undefined' && $('.summernote').length) {
+        $('.summernote').summernote({
+            height: 300,
+            minHeight: null,
+            maxHeight: null,
+            focus: true,
+            lang: 'id-ID',
+            toolbar: [
+                ['style', ['style']],
+                ['font', ['bold', 'underline', 'clear']],
+                ['fontname', ['fontname']],
+                ['color', ['color']],
+                ['para', ['ul', 'ol', 'paragraph']],
+                ['table', ['table']],
+                ['insert', ['link', 'picture', 'video']],
+                ['view', ['fullscreen', 'codeview', 'help']],
+            ],
+            callbacks: {
+                onImageUpload: function(files) {
+                    uploadImage(files[0], this);
+                }
             }
-        }
-    });
+        });
+    } else if ($('.summernote').length) {
+        console.error('Summernote plugin is not loaded.');
+    }
 });
 
 // Function to handle image upload for Summernote
