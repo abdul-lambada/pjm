@@ -10,15 +10,16 @@
                   <span class="sitename fs-4 fw-bold text-gradient">Prohaba Jaya Mandiri</span>
                 </a>
                 <div class="footer-contact mb-2 mb-md-3">
-                  <address class="mb-1">Jl. G. Obos XV, Komp. Ruko 3G No. 2</address>
-                  <address class="mb-1">Palangka Raya, Kalimantan Tengah</address>
-                  <p class="mb-1"><i class="bi bi-telephone me-2" aria-hidden="true"></i><strong class="visually-hidden">Phone:</strong> <a href="tel:+625363226305" class="text-decoration-none text-dark">(0536) 3226305</a></p>
-                  <p class="mb-1"><i class="bi bi-envelope me-2" aria-hidden="true"></i><strong class="visually-hidden">Email:</strong> <a href="mailto:prohabajaya.mandiri@gmail.com" class="text-decoration-none text-dark">prohabajaya.mandiri@gmail.com</a></p>
+                  <address class="mb-1">JL. MT Haryono Komp. Ruko Tamansari Bukit Mutiara</address>
+                  <address class="mb-1">Blok A1. No. 09 RT.16, Gunung Samarinda Baru,</address>
+                  <address class="mb-1">Balikpapan Utara, Kalimantan Timur 76114</address>
+                  <p class="mb-1"><i class="bi bi-telephone me-2" aria-hidden="true"></i><strong class="visually-hidden">Phone:</strong> <a href="tel:0542-873295" class="text-decoration-none text-dark">0542-873295</a></p>
+                  <p class="mb-1"><i class="bi bi-envelope me-2" aria-hidden="true"></i><strong class="visually-hidden">Email:</strong> <a href="mailto:administration@prohaba.co.id" class="text-decoration-none text-dark">administration@prohaba.co.id</a></p>
                 </div>
                 <div class="social-links d-flex justify-content-md-start justify-content-center gap-2 gap-md-3 mt-2">
                   <a href="#" class="footer-social-link" aria-label="Twitter" target="_blank" rel="noopener"><i class="bi bi-twitter"></i></a>
                   <a href="#" class="footer-social-link" aria-label="Facebook" target="_blank" rel="noopener"><i class="bi bi-facebook"></i></a>
-                  <a href="#" class="footer-social-link" aria-label="Instagram" target="_blank" rel="noopener"><i class="bi bi-instagram"></i></a>
+                  <a href="https://www.instagram.com/prohabajayamandiri/" class="footer-social-link" aria-label="Instagram" target="_blank" rel="noopener"><i class="bi bi-instagram"></i></a>
                   <a href="#" class="footer-social-link" aria-label="LinkedIn" target="_blank" rel="noopener"><i class="bi bi-linkedin"></i></a>
                   <a href="mailto:prohabajaya.mandiri@gmail.com" class="footer-social-link" aria-label="Email"><i class="bi bi-envelope-at"></i></a>
                 </div>
