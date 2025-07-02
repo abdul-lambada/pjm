@@ -31,6 +31,7 @@
           <ul class="dropdown-menu" aria-labelledby="tentangKamiDropdown">
             <li><a class="dropdown-item <?= $current_page == '/pjm/pages/introduction.php' ? 'active' : '' ?>" href="/pjm/pages/introduction.php">Profil</a></li>
             <li><a class="dropdown-item <?= $current_page == '/pjm/pages/galeri.php' ? 'active' : '' ?>" href="/pjm/pages/galeri.php">Galeri</a></li>
+            <li><a class="dropdown-item <?= $current_page == '/pjm/pages/video.php' ? 'active' : '' ?>" href="/pjm/pages/video.php">Video</a></li>
           </ul>
         </li>
         <li><a href="/pjm/pages/service.php" class="<?= $current_page == '/pjm/pages/service.php' ? 'active' : '' ?>">Layanan</a></li>
