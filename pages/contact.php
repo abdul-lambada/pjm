@@ -51,7 +51,7 @@ ob_start();
               <i class="bi bi-envelope"></i>
             </div>
             <h5 class="fw-semibold mb-1 text-center">Email</h5>
-            <p class="small text-center mb-0">administration@prohabajayagroup.co.id</p>
+            <p class="small text-center mb-0">administration@prohaba.co.id</p>
           </div>
         </div>
       </div>

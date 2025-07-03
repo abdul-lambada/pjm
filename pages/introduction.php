@@ -63,7 +63,7 @@ ob_start();
               <i class="bi bi-clipboard-check fs-1 text-primary bg-light rounded-circle p-3 shadow-sm"></i>
             </div>
             <h3 class="fw-bold mb-2">Visi</h3>
-            <p>Menjadi perusahaan jasa konstruksi yang terpercaya dan terkemuka di Indonesia dengan mengutamakan kualitas, inovasi, dan kepuasan pelanggan.</p>
+            <p>Prohaba Jaya Mandiri berkualitas menjadi perusahaan terbaik di Indonesia dengan mengedepankan Kejujuran, Keikhlasan dan Amanah.</p>
           </div>
         </div><!-- Card Item -->
         <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
@@ -72,7 +72,7 @@ ob_start();
               <i class="bi bi-rocket fs-1 text-primary bg-light rounded-circle p-3 shadow-sm"></i>
             </div>
             <h3 class="fw-bold mb-2">Misi</h3>
-            <p>Memberikan solusi konstruksi yang efektif dan efisien, serta membangun hubungan jangka panjang yang saling menguntungkan dengan mitra kerja.</p>
+            <p>Mengutamakan kepuasan pelanggan dengan menghasilkan produk yang bermutu tinggi sesuai dengan permintaan Pelanggan/Customer.</p>
           </div>
         </div><!-- Card Item -->
         <div class="col-lg-4" data-aos="fade-up" data-aos-delay="300">
