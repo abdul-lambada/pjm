@@ -122,7 +122,7 @@ ob_start();
             <div class="member-content p-3">
               <h4 class="fw-semibold">Open Storage site BIB</h4>
               <p>Proyek Pembangunan Open Storage site BIB.</p>
-              <a href="/pjm/pages/berita1.php" class="btn btn-outline-primary btn-sm">Selengkapnya</a>
+              <a href="/pjm/pages/berita_detail.php" class="btn btn-outline-primary btn-sm">Selengkapnya</a>
             </div>
           </div>
         </div>
@@ -133,7 +133,7 @@ ob_start();
             <div class="member-content p-3">
               <h4 class="fw-semibold">Workshop Support site BIB</h4>
               <p>Proyek Pembangunan Workshop Support site BIB.</p>
-              <a href="/pjm/pages/berita2.php" class="btn btn-outline-primary btn-sm">Selengkapnya</a>
+              <a href="/pjm/pages/berita_detail.php" class="btn btn-outline-primary btn-sm">Selengkapnya</a>
             </div>
           </div>
         </div>
@@ -144,7 +144,7 @@ ob_start();
             <div class="member-content p-3">
               <h4 class="fw-semibold">Ruang Induksi site BIB</h4>
               <p>Proyek Pembangunan Ruang Induksi site BIB.</p>
-              <a href="/pjm/pages/berita3.php" class="btn btn-outline-primary btn-sm">Selengkapnya</a>
+              <a href="/pjm/pages/berita_detail.php" class="btn btn-outline-primary btn-sm">Selengkapnya</a>
             </div>
           </div>
         </div>
