@@ -107,6 +107,26 @@ document.addEventListener('DOMContentLoaded', function() {
     handleResize();
 });
 
+// Sidebar toggle
+function toggleSidebar() {
+    document.getElementById('adminSidebar').classList.toggle('collapsed');
+}
+
+// Profile dropdown toggle
+function toggleProfileDropdown() {
+    document.getElementById('profileDropdown').classList.toggle('show');
+}
+
+// Close dropdown jika klik di luar
+window.onclick = function(event) {
+    if (!event.target.matches('.profile-avatar')) {
+        var dropdown = document.getElementById('profileDropdown');
+        if (dropdown && dropdown.classList.contains('show')) {
+            dropdown.classList.remove('show');
+        }
+    }
+}
+
 // Activate tooltips
 const tooltipTriggerList = [].slice.call(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
 const tooltipList = tooltipTriggerList.map(function (tooltipTriggerEl) {
