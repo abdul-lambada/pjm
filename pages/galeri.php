@@ -1,5 +1,5 @@
 <?php
-$page_title = 'Galeri';
+$page_title = 'Galeri - Prohaba Jaya Mandiri';
 $breadcrumb = [
   ['name' => 'Beranda', 'url' => '/pjm/index.php'],
   ['name' => 'Galeri']
@@ -23,134 +23,150 @@ ob_start();
   </div>
 </section>
 
-<main class="main">
-
+<main>
   <!-- Portfolio Section -->
-  <section id="portfolio" class="portfolio section py-5" style="background: linear-gradient(135deg, #f8fafb 0%, #e8f5f1 100%);">
+  <section id="portfolio" class="py-5" style="background: linear-gradient(135deg, #f8fafb 0%, #e8f5f1 100%);" data-aos="fade-up">
     <div class="container">
+      
+      <div class="section-title text-center mb-5" data-aos="fade-up">
+        <h2 class="fw-bold mb-2"><i class="bi bi-images text-primary me-2"></i>Galeri Proyek</h2>
+        <p class="text-muted">Dokumentasi visual dari berbagai proyek konstruksi yang telah kami selesaikan.</p>
+      </div>
 
-      <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
+      <!-- Portfolio Filters -->
+      <div class="text-center mb-5" data-aos="fade-up" data-aos-delay="100">
+        <div class="d-flex justify-content-center flex-wrap gap-2" role="group" aria-label="Filter galeri">
+          <button type="button" class="btn btn-outline-primary rounded-pill active" data-filter="all">Semua</button>
+          <button type="button" class="btn btn-outline-primary rounded-pill" data-filter="construction">Konstruksi</button>
+          <button type="button" class="btn btn-outline-primary rounded-pill" data-filter="infrastructure">Infrastruktur</button>
+          <button type="button" class="btn btn-outline-primary rounded-pill" data-filter="workshop">Workshop</button>
+        </div>
+      </div>
 
-        <ul class="portfolio-filters isotope-filters d-flex justify-content-center flex-wrap gap-2 mb-4" data-aos="fade-up" data-aos-delay="100">
-          <li data-filter="*" class="filter-active btn btn-sm btn-outline-primary rounded-pill active">Semua</li>
-          <li data-filter=".filter-construction" class="btn btn-sm btn-outline-primary rounded-pill">Konstruksi</li>
-          <li data-filter=".filter-infrastructure" class="btn btn-sm btn-outline-primary rounded-pill">Infrastruktur</li>
-          <li data-filter=".filter-workshop" class="btn btn-sm btn-outline-primary rounded-pill">Workshop</li>
-        </ul><!-- End Portfolio Filters -->
+      <!-- Portfolio Grid -->
+      <div class="row gy-4" data-aos="fade-up" data-aos-delay="200">
 
-        <div class="row gy-5 isotope-container" data-aos="fade-up" data-aos-delay="200">
-
-          <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-workshop">
-            <div class="card shadow-lg border-0 rounded-4 overflow-hidden h-100 portfolio-card" data-aos="zoom-in">
-              <img src="/pjm/assets/img/new/c.jpg" class="img-fluid rounded-top" alt="">
-              <div class="portfolio-info p-3">
-                <h4 class="fw-bold mb-1">Pembangunan Open Storage</h4>
-                <p class="small mb-2">Site BIB</p>
-                <a href="/pjm/assets/img/new/c.jpg" title="Pembangunan Open Storage" data-gallery="portfolio-gallery-workshop" class="glightbox preview-link btn btn-sm btn-outline-primary rounded-pill"><i class="bi bi-zoom-in"></i> Preview</a>
-              </div>
+        <div class="col-lg-4 col-md-6 portfolio-item" data-category="workshop">
+          <div class="card shadow-lg border-0 rounded-4 overflow-hidden h-100 portfolio-card" data-aos="zoom-in" data-aos-delay="100">
+            <img src="/pjm/assets/img/new/c.jpg" class="img-fluid rounded-top" alt="Pembangunan Open Storage">
+            <div class="portfolio-info p-4">
+              <h4 class="fw-bold mb-2">Pembangunan Open Storage</h4>
+              <p class="text-muted small mb-3">Site BIB</p>
+              <a href="/pjm/assets/img/new/c.jpg" title="Pembangunan Open Storage" data-gallery="portfolio-gallery" class="glightbox preview-link btn btn-sm btn-outline-primary rounded-pill">
+                <i class="bi bi-zoom-in me-1"></i>Preview
+              </a>
             </div>
           </div>
-          <!-- End Portfolio Item -->
-
-          <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-workshop">
-            <div class="card shadow-lg border-0 rounded-4 overflow-hidden h-100 portfolio-card" data-aos="zoom-in">
-              <img src="/pjm/assets/img/new/b.jpg" class="img-fluid rounded-top" alt="">
-              <div class="portfolio-info p-3">
-                <h4 class="fw-bold mb-1">Pembangunan Workshop Support</h4>
-                <p class="small mb-2">Site BIB</p>
-                <a href="/pjm/assets/img/new/b.jpg" title="Pembangunan Workshop Support" data-gallery="portfolio-gallery-workshop" class="glightbox preview-link btn btn-sm btn-outline-primary rounded-pill"><i class="bi bi-zoom-in"></i> Preview</a>
-              </div>
-            </div>
-          </div><!-- End Portfolio Item -->
-
-          <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-construction">
-            <div class="card shadow-lg border-0 rounded-4 overflow-hidden h-100 portfolio-card" data-aos="zoom-in">
-              <img src="/pjm/assets/img/new/a.jpg" class="img-fluid rounded-top" alt="">
-              <div class="portfolio-info p-3">
-                <h4 class="fw-bold mb-1">Pembangunan Ruang Induksi</h4>
-                <p class="small mb-2">Site BIB</p>
-                <a href="/pjm/assets/img/new/a.jpg" title="Pembangunan Ruang Induksi" data-gallery="portfolio-gallery-construction" class="glightbox preview-link btn btn-sm btn-outline-primary rounded-pill"><i class="bi bi-zoom-in"></i> Preview</a>
-              </div>
-            </div>
-          </div><!-- End Portfolio Item -->
-
-          <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-infrastructure">
-            <div class="card shadow-lg border-0 rounded-4 overflow-hidden h-100 portfolio-card" data-aos="zoom-in">
-              <img src="/pjm/assets/img/new/d.jpg" class="img-fluid rounded-top" alt="">
-              <div class="portfolio-info p-3">
-                <h4 class="fw-bold mb-1">Pembangunan Washpad HD 2 BAY</h4>
-                <p class="small mb-2">Site BIB</p>
-                <a href="/pjm/assets/img/new/d.jpg" title="Pembangunan Washpad HD 2 BAY" data-gallery="portfolio-gallery-infrastructure" class="glightbox preview-link btn btn-sm btn-outline-primary rounded-pill"><i class="bi bi-zoom-in"></i> Preview</a>
-              </div>
-            </div>
-          </div><!-- End Portfolio Item -->
-
-          <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-workshop">
-            <div class="card shadow-lg border-0 rounded-4 overflow-hidden h-100 portfolio-card" data-aos="zoom-in">
-              <img src="/pjm/assets/img/new/e.jpg" class="img-fluid rounded-top" alt="">
-              <div class="portfolio-info p-3">
-                <h4 class="fw-bold mb-1">Pembangunan Workshop HD 4 BAY</h4>
-                <p class="small mb-2">Site BIB</p>
-                <a href="/pjm/assets/img/new/e.jpg" title="Pembangunan Workshop HD 4 BAY" data-gallery="portfolio-gallery-workshop" class="glightbox preview-link btn btn-sm btn-outline-primary rounded-pill"><i class="bi bi-zoom-in"></i> Preview</a>
-              </div>
-            </div>
-          </div><!-- End Portfolio Item -->
-
-          <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-construction">
-            <div class="card shadow-lg border-0 rounded-4 overflow-hidden h-100 portfolio-card" data-aos="zoom-in">
-              <img src="/pjm/assets/img/project/25 ERT site MIFA/c.jpeg" class="img-fluid rounded-top" alt="">
-              <div class="portfolio-info p-3">
-                <h4 class="fw-bold mb-1">Pembangunan ERT</h4>
-                <p class="small mb-2">Site MIFA</p>
-                <a href="/pjm/assets/img/project/25 ERT site MIFA/c.jpeg" title="Pembangunan ERT" data-gallery="portfolio-gallery-construction" class="glightbox preview-link btn btn-sm btn-outline-primary rounded-pill"><i class="bi bi-zoom-in"></i> Preview</a>
-              </div>
-            </div>
-          </div><!-- End Portfolio Item -->
-
-          <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-construction">
-            <div class="card shadow-lg border-0 rounded-4 overflow-hidden h-100 portfolio-card" data-aos="zoom-in">
-              <img src="/pjm/assets/img/project/26 Mess non Staff D1/c.jpeg" class="img-fluid rounded-top" alt="">
-              <div class="portfolio-info p-3">
-                <h4 class="fw-bold mb-1">Pembangunan Mess Non-Staff</h4>
-                <p class="small mb-2">Site MIFA</p>
-                <a href="/pjm/assets/img/project/26 Mess non Staff D1/c.jpeg" title="Pembangunan Mess Non-Staff" data-gallery="portfolio-gallery-construction" class="glightbox preview-link btn btn-sm btn-outline-primary rounded-pill"><i class="bi bi-zoom-in"></i> Preview</a>
-              </div>
-            </div>
-          </div><!-- End Portfolio Item -->
-
-          <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-infrastructure">
-            <div class="card shadow-lg border-0 rounded-4 overflow-hidden h-100 portfolio-card" data-aos="zoom-in">
-              <img src="/pjm/assets/img/project/27 View Point site MIFA/c.jpeg" class="img-fluid rounded-top" alt="">
-              <div class="portfolio-info p-3">
-                <h4 class="fw-bold mb-1">Pembangunan View Point</h4>
-                <p class="small mb-2">Site MIFA</p>
-                <a href="/pjm/assets/img/project/27 View Point site MIFA/c.jpeg" title="Pembangunan View Point" data-gallery="portfolio-gallery-infrastructure" class="glightbox preview-link btn btn-sm btn-outline-primary rounded-pill"><i class="bi bi-zoom-in"></i> Preview</a>
-              </div>
-            </div>
-          </div><!-- End Portfolio Item -->
-
-          <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-infrastructure">
-            <div class="card shadow-lg border-0 rounded-4 overflow-hidden h-100 portfolio-card" data-aos="zoom-in">
-              <img src="/pjm/assets/img/project/28 Washpad site MIFA/c.jpeg" class="img-fluid rounded-top" alt="">
-              <div class="portfolio-info p-3">
-                <h4 class="fw-bold mb-1">Pembangunan Washpad</h4>
-                <p class="small mb-2">Site MIFA</p>
-                <a href="/pjm/assets/img/project/28 Washpad site MIFA/c.jpeg" title="Pembangunan Washpad" data-gallery="portfolio-gallery-infrastructure" class="glightbox preview-link btn btn-sm btn-outline-primary rounded-pill"><i class="bi bi-zoom-in"></i> Preview</a>
-              </div>
-            </div>
-          </div><!-- End Portfolio Item -->
-          <p class="small mb-2">Site MIFA</p>
-          <a href="/pjm/assets/img/project/28 Washpad site MIFA/c.jpeg" title="Pembangunan Washpad" data-gallery="portfolio-gallery-infrastructure" class="glightbox preview-link btn btn-sm btn-outline-primary rounded-pill"><i class="bi bi-zoom-in"></i> Preview</a>
         </div>
-      </div><!-- End Portfolio Item -->
 
-    </div><!-- End Portfolio Container -->
+        <div class="col-lg-4 col-md-6 portfolio-item" data-category="workshop">
+          <div class="card shadow-lg border-0 rounded-4 overflow-hidden h-100 portfolio-card" data-aos="zoom-in" data-aos-delay="150">
+            <img src="/pjm/assets/img/new/b.jpg" class="img-fluid rounded-top" alt="Pembangunan Workshop Support">
+            <div class="portfolio-info p-4">
+              <h4 class="fw-bold mb-2">Pembangunan Workshop Support</h4>
+              <p class="text-muted small mb-3">Site BIB</p>
+              <a href="/pjm/assets/img/new/b.jpg" title="Pembangunan Workshop Support" data-gallery="portfolio-gallery" class="glightbox preview-link btn btn-sm btn-outline-primary rounded-pill">
+                <i class="bi bi-zoom-in me-1"></i>Preview
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item" data-category="construction">
+          <div class="card shadow-lg border-0 rounded-4 overflow-hidden h-100 portfolio-card" data-aos="zoom-in" data-aos-delay="200">
+            <img src="/pjm/assets/img/new/a.jpg" class="img-fluid rounded-top" alt="Pembangunan Ruang Induksi">
+            <div class="portfolio-info p-4">
+              <h4 class="fw-bold mb-2">Pembangunan Ruang Induksi</h4>
+              <p class="text-muted small mb-3">Site BIB</p>
+              <a href="/pjm/assets/img/new/a.jpg" title="Pembangunan Ruang Induksi" data-gallery="portfolio-gallery" class="glightbox preview-link btn btn-sm btn-outline-primary rounded-pill">
+                <i class="bi bi-zoom-in me-1"></i>Preview
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item" data-category="infrastructure">
+          <div class="card shadow-lg border-0 rounded-4 overflow-hidden h-100 portfolio-card" data-aos="zoom-in" data-aos-delay="250">
+            <img src="/pjm/assets/img/new/d.jpg" class="img-fluid rounded-top" alt="Pembangunan Washpad HD 2 BAY">
+            <div class="portfolio-info p-4">
+              <h4 class="fw-bold mb-2">Pembangunan Washpad HD 2 BAY</h4>
+              <p class="text-muted small mb-3">Site BIB</p>
+              <a href="/pjm/assets/img/new/d.jpg" title="Pembangunan Washpad HD 2 BAY" data-gallery="portfolio-gallery" class="glightbox preview-link btn btn-sm btn-outline-primary rounded-pill">
+                <i class="bi bi-zoom-in me-1"></i>Preview
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item" data-category="workshop">
+          <div class="card shadow-lg border-0 rounded-4 overflow-hidden h-100 portfolio-card" data-aos="zoom-in" data-aos-delay="300">
+            <img src="/pjm/assets/img/new/e.jpg" class="img-fluid rounded-top" alt="Pembangunan Workshop HD 4 BAY">
+            <div class="portfolio-info p-4">
+              <h4 class="fw-bold mb-2">Pembangunan Workshop HD 4 BAY</h4>
+              <p class="text-muted small mb-3">Site BIB</p>
+              <a href="/pjm/assets/img/new/e.jpg" title="Pembangunan Workshop HD 4 BAY" data-gallery="portfolio-gallery" class="glightbox preview-link btn btn-sm btn-outline-primary rounded-pill">
+                <i class="bi bi-zoom-in me-1"></i>Preview
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item" data-category="construction">
+          <div class="card shadow-lg border-0 rounded-4 overflow-hidden h-100 portfolio-card" data-aos="zoom-in" data-aos-delay="350">
+            <img src="/pjm/assets/img/project/25 ERT site MIFA/c.jpeg" class="img-fluid rounded-top" alt="Pembangunan ERT">
+            <div class="portfolio-info p-4">
+              <h4 class="fw-bold mb-2">Pembangunan ERT</h4>
+              <p class="text-muted small mb-3">Site MIFA</p>
+              <a href="/pjm/assets/img/project/25 ERT site MIFA/c.jpeg" title="Pembangunan ERT" data-gallery="portfolio-gallery" class="glightbox preview-link btn btn-sm btn-outline-primary rounded-pill">
+                <i class="bi bi-zoom-in me-1"></i>Preview
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item" data-category="construction">
+          <div class="card shadow-lg border-0 rounded-4 overflow-hidden h-100 portfolio-card" data-aos="zoom-in" data-aos-delay="400">
+            <img src="/pjm/assets/img/project/26 Mess non Staff D1/c.jpeg" class="img-fluid rounded-top" alt="Pembangunan Mess Non-Staff">
+            <div class="portfolio-info p-4">
+              <h4 class="fw-bold mb-2">Pembangunan Mess Non-Staff</h4>
+              <p class="text-muted small mb-3">Site MIFA</p>
+              <a href="/pjm/assets/img/project/26 Mess non Staff D1/c.jpeg" title="Pembangunan Mess Non-Staff" data-gallery="portfolio-gallery" class="glightbox preview-link btn btn-sm btn-outline-primary rounded-pill">
+                <i class="bi bi-zoom-in me-1"></i>Preview
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item" data-category="infrastructure">
+          <div class="card shadow-lg border-0 rounded-4 overflow-hidden h-100 portfolio-card" data-aos="zoom-in" data-aos-delay="450">
+            <img src="/pjm/assets/img/project/27 View Point site MIFA/c.jpeg" class="img-fluid rounded-top" alt="Pembangunan View Point">
+            <div class="portfolio-info p-4">
+              <h4 class="fw-bold mb-2">Pembangunan View Point</h4>
+              <p class="text-muted small mb-3">Site MIFA</p>
+              <a href="/pjm/assets/img/project/27 View Point site MIFA/c.jpeg" title="Pembangunan View Point" data-gallery="portfolio-gallery" class="glightbox preview-link btn btn-sm btn-outline-primary rounded-pill">
+                <i class="bi bi-zoom-in me-1"></i>Preview
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-4 col-md-6 portfolio-item" data-category="infrastructure">
+          <div class="card shadow-lg border-0 rounded-4 overflow-hidden h-100 portfolio-card" data-aos="zoom-in" data-aos-delay="500">
+            <img src="/pjm/assets/img/project/28 Washpad site MIFA/c.jpeg" class="img-fluid rounded-top" alt="Pembangunan Washpad">
+            <div class="portfolio-info p-4">
+              <h4 class="fw-bold mb-2">Pembangunan Washpad</h4>
+              <p class="text-muted small mb-3">Site MIFA</p>
+              <a href="/pjm/assets/img/project/28 Washpad site MIFA/c.jpeg" title="Pembangunan Washpad" data-gallery="portfolio-gallery" class="glightbox preview-link btn btn-sm btn-outline-primary rounded-pill">
+                <i class="bi bi-zoom-in me-1"></i>Preview
+              </a>
+            </div>
+          </div>
+        </div>
+
+      </div>
 
     </div>
-
-    </div>
-
-  </section><!-- /Portfolio Section -->
+  </section>
 
 </main>
 

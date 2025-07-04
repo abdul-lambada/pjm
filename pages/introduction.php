@@ -4,10 +4,8 @@ $breadcrumb = [
   ['name' => 'Beranda', 'url' => '/pjm/index.php'],
   ['name' => 'Tentang Kami']
 ];
-
 ob_start();
 ?>
-
 <!-- Page Header / Judul Menu -->
 <section class="page-header py-4 bg-white border-bottom mb-4">
   <div class="container">
@@ -22,11 +20,14 @@ ob_start();
     </div>
   </div>
 </section>
-
-<main class="main">
-
+<main>
+  <!-- Section Title -->
+  <div class="section-title text-center mb-5" data-aos="fade-up">
+    <h2 class="fw-bold mb-2"><i class="bi bi-info-circle text-primary me-2"></i>Tentang Proyek & Perusahaan</h2>
+    <p class="text-muted">Dokumentasi visual dan informasi tentang sejarah, visi, misi, dan nilai-nilai utama Prohaba Jaya Mandiri.</p>
+  </div>
   <!-- About Section -->
-  <section id="about" class="about section" style="background: linear-gradient(135deg, #f8fafb 0%, #e8f5f1 100%);">
+  <section id="about" class="py-5" data-aos="fade-right">
     <div class="container">
       <div class="row gy-5 align-items-center justify-content-center">
         <div class="col-lg-10">
@@ -37,9 +38,9 @@ ob_start();
                 <p class="fst-italic">
                   Berdiri pada 26 Juni 2013 di Balikapapan, Kalimantan Timur. Kami bergerak dalam bidang Jasa Konstruksi, meliputi pembangunan gedung, perumahan, jalan, fasilitas pertambangan, dan infrastruktur listrik.
                 </p>
-                <ul>
-                  <li><i class="bi bi-check-circle"></i> <span>Didukung oleh tenaga ahli yang kompeten dan berpengalaman, kami bekerja secara profesional dan disiplin sesuai dengan motto perusahaan: <strong>"Jujur, Ikhlas, Amanah"</strong>.</span></li>
-                  <li><i class="bi bi-check-circle"></i> <span>Sebagai wujud komitmen pada kualitas, kami menerapkan Sistem Manajemen terintegrasi (ISO 9001:2015, ISO 45001:2018, dan ISO 14001:2015) untuk peningkatan kinerja yang berkelanjutan.</span></li>
+                <ul class="list-unstyled mb-0">
+                  <li class="mb-2"><i class="bi bi-check-circle text-primary me-2"></i>Didukung oleh tenaga ahli yang kompeten dan berpengalaman, kami bekerja secara profesional dan disiplin sesuai dengan motto perusahaan: <strong>"Jujur, Ikhlas, Amanah"</strong>.</li>
+                  <li><i class="bi bi-check-circle text-primary me-2"></i>Sebagai wujud komitmen pada kualitas, kami menerapkan Sistem Manajemen terintegrasi (ISO 9001:2015, ISO 45001:2018, dan ISO 14001:2015) untuk peningkatan kinerja yang berkelanjutan.</li>
                 </ul>
               </div>
               <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
@@ -47,82 +48,83 @@ ob_start();
               </div>
             </div>
           </div>
-  </section><!-- /About Section -->
-
-  <!-- Why Us Section -->
-  <section id="why-us" class="section why-us light-background" style="background: linear-gradient(135deg, #f8fafb 0%, #e8f5f1 100%);">
-    <div class="container section-title" data-aos="fade-up">
-      <h2>Visi, Misi & Nilai</h2>
-      <p>Komitmen kami untuk memberikan yang terbaik bagi klien dan mitra kami.</p>
+        </div>
+      </div>
     </div>
+  </section>
+  <!-- Why Us Section -->
+  <section id="why-us" class="bg-light py-5" data-aos="zoom-in">
     <div class="container">
+      <div class="section-title text-center mb-4" data-aos="fade-up">
+        <h2>Visi, Misi & Nilai</h2>
+        <p>Komitmen kami untuk memberikan yang terbaik bagi klien dan mitra kami.</p>
+      </div>
       <div class="row gy-4">
         <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
-          <div class="card shadow-lg border-0 rounded-4 p-4 h-100 text-center" data-aos="zoom-in">
+          <div class="card shadow-lg border-0 rounded-4 p-4 h-100 text-center">
             <div class="icon-box mb-3">
               <i class="bi bi-clipboard-check fs-1 text-primary bg-light rounded-circle p-3 shadow-sm"></i>
             </div>
             <h3 class="fw-bold mb-2">Visi</h3>
             <p>Prohaba Jaya Mandiri berkualitas menjadi perusahaan terbaik di Indonesia dengan mengedepankan Kejujuran, Keikhlasan dan Amanah.</p>
           </div>
-        </div><!-- Card Item -->
+        </div>
         <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
-          <div class="card shadow-lg border-0 rounded-4 p-4 h-100 text-center" data-aos="zoom-in">
+          <div class="card shadow-lg border-0 rounded-4 p-4 h-100 text-center">
             <div class="icon-box mb-3">
               <i class="bi bi-rocket fs-1 text-primary bg-light rounded-circle p-3 shadow-sm"></i>
             </div>
             <h3 class="fw-bold mb-2">Misi</h3>
             <p>Mengutamakan kepuasan pelanggan dengan menghasilkan produk yang bermutu tinggi sesuai dengan permintaan Pelanggan/Customer.</p>
           </div>
-        </div><!-- Card Item -->
+        </div>
         <div class="col-lg-4" data-aos="fade-up" data-aos-delay="300">
-          <div class="card shadow-lg border-0 rounded-4 p-4 h-100 text-center" data-aos="zoom-in">
+          <div class="card shadow-lg border-0 rounded-4 p-4 h-100 text-center">
             <div class="icon-box mb-3">
               <i class="bi bi-gem fs-1 text-primary bg-light rounded-circle p-3 shadow-sm"></i>
             </div>
             <h3 class="fw-bold mb-2">Nilai</h3>
             <p>Jujur, Ikhlas, dan Amanah menjadi landasan utama kami dalam setiap proyek yang kami kerjakan untuk menjaga kepercayaan pelanggan dan mitra.</p>
           </div>
-        </div><!-- Card Item -->
+        </div>
       </div>
     </div>
-  </section><!-- /Why Us Section -->
-
+  </section>
   <!-- Stats Section -->
-  <section id="stats" class="stats-section section bg-gradient-stats py-5">
+  <section id="stats" class="bg-white py-5" data-aos="fade-up">
     <div class="container">
       <div class="row g-4 justify-content-center">
         <div class="col-lg-3 col-md-6" data-aos="fade-up">
-          <div class="card stats-card border-0 shadow-sm text-center p-4 h-100">
+          <div class="card border-0 shadow-sm text-center p-4 h-100">
             <div class="stats-icon mx-auto mb-3 d-flex align-items-center justify-content-center">
-              <i class="bi bi-emoji-smile"></i>
+              <i class="bi bi-emoji-smile fs-2 text-primary"></i>
             </div>
             <span data-purecounter-start="0" data-purecounter-end="10" data-purecounter-duration="1" class="purecounter display-5 fw-bold"></span>
             <p class="mb-0 mt-2">Klien Puas</p>
           </div>
         </div>
         <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="100">
-          <div class="card stats-card border-0 shadow-sm text-center p-4 h-100">
+          <div class="card border-0 shadow-sm text-center p-4 h-100">
             <div class="stats-icon mx-auto mb-3 d-flex align-items-center justify-content-center">
-              <i class="bi bi-journal-richtext"></i>
+              <i class="bi bi-journal-richtext fs-2 text-primary"></i>
             </div>
             <span data-purecounter-start="0" data-purecounter-end="15" data-purecounter-duration="1" class="purecounter display-5 fw-bold"></span>
             <p class="mb-0 mt-2">Proyek Selesai</p>
           </div>
         </div>
         <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="200">
-          <div class="card stats-card border-0 shadow-sm text-center p-4 h-100">
+          <div class="card border-0 shadow-sm text-center p-4 h-100">
             <div class="stats-icon mx-auto mb-3 d-flex align-items-center justify-content-center">
-              <i class="bi bi-people"></i>
+              <i class="bi bi-people fs-2 text-primary"></i>
             </div>
             <span data-purecounter-start="0" data-purecounter-end="25" data-purecounter-duration="1" class="purecounter display-5 fw-bold"></span>
             <p class="mb-0 mt-2">Tenaga Ahli</p>
           </div>
         </div>
         <div class="col-lg-3 col-md-6" data-aos="fade-up" data-aos-delay="300">
-          <div class="card stats-card border-0 shadow-sm text-center p-4 h-100">
+          <div class="card border-0 shadow-sm text-center p-4 h-100">
             <div class="stats-icon mx-auto mb-3 d-flex align-items-center justify-content-center">
-              <i class="bi bi-clock"></i>
+              <i class="bi bi-clock fs-2 text-primary"></i>
             </div>
             <span data-purecounter-start="0" data-purecounter-end="11" data-purecounter-duration="1" class="purecounter display-5 fw-bold"></span>
             <p class="mb-0 mt-2">Tahun Pengalaman</p>
@@ -130,10 +132,9 @@ ob_start();
         </div>
       </div>
     </div>
-  </section><!-- /Stats Section -->
-
+  </section>
   <!-- FAQ Section -->
-  <section id="faq" class="faq-section section bg-gradient-faq py-5">
+  <section id="faq" class="bg-light py-5" data-aos="fade-left">
     <div class="container">
       <div class="section-title text-center mb-4" data-aos="fade-up">
         <h2 class="fw-bold mb-2"><i class="bi bi-question-circle text-primary me-2"></i>Pertanyaan Umum</h2>
@@ -141,7 +142,7 @@ ob_start();
       </div>
       <div class="row justify-content-center">
         <div class="col-lg-10">
-          <div class="accordion accordion-flush faq-accordion shadow-sm rounded-4 overflow-hidden" id="faqAccordion" data-aos="fade-up" data-aos-delay="100">
+          <div class="accordion accordion-flush shadow-sm rounded-4 overflow-hidden" id="faqAccordion" data-aos="fade-up" data-aos-delay="100">
             <div class="accordion-item">
               <h3 class="accordion-header" id="faq-heading-1">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq-collapse-1" aria-expanded="false" aria-controls="faq-collapse-1">
@@ -182,10 +183,8 @@ ob_start();
         </div>
       </div>
     </div>
-  </section><!-- /FAQ Section -->
-
+  </section>
 </main>
-
 <?php
 $main_content = ob_get_clean();
 include_once __DIR__ . '/../templates/public_template.php';

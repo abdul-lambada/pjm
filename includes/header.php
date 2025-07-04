@@ -1,46 +1,44 @@
 <?php
-// Header Responsive Baru
+$uri = $_SERVER['REQUEST_URI'];
+function menu_active($paths) {
+  global $uri;
+  foreach ((array)$paths as $path) {
+    if (strpos($uri, $path) !== false) return 'active';
+  }
+  return '';
+}
 ?>
-<header id="header" class="header sticky-top">
-  <div class="container-xl d-flex align-items-center justify-content-between position-relative">
-    
-    <!-- Logo dan Nama Situs -->
-    <a href="/pjm/index.php" class="logo d-flex align-items-center text-decoration-none">
-      <img src="/pjm/assets/img/title.png" alt="Prohaba Jaya Mandiri" style="max-height:48px;">
+<nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm sticky-top py-2">
+  <div class="container-xl">
+    <a class="navbar-brand d-flex align-items-center" href="/pjm/index.php">
+      <img src="/pjm/assets/img/title.png" alt="Prohaba Jaya Mandiri">
       <span class="sitename ms-2">Prohaba Jaya Mandiri</span>
     </a>
-
-    <!-- Tombol Hamburger -->
-    <button class="mobile-nav-toggle d-lg-none ms-2" type="button" aria-label="Toggle navigation">
-      <i class="bi bi-list" aria-hidden="true"></i>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNavbar" aria-controls="mainNavbar" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
     </button>
-
-    <!-- Menu Navigasi -->
-    <nav id="navmenu" class="navmenu">
-      <ul class="nav-list">
-        <li><a href="/pjm/index.php">Beranda</a></li>
-
-        <!-- Dropdown Tentang Kami -->
-        <li class="dropdown">
-          <a href="#" class="dropdown-toggle" role="button" aria-expanded="false">
-            Tentang Kami <i class="bi bi-chevron-down small ms-1"></i>
+    <div class="collapse navbar-collapse" id="mainNavbar">
+      <ul class="navbar-nav ms-auto mb-2 mb-lg-0 gap-2 gap-lg-4">
+        <li class="nav-item">
+          <a class="nav-link <?php echo menu_active(['/pjm/index.php']); ?>" href="/pjm/index.php">Beranda</a>
+        </li>
+        <li class="nav-item dropdown <?php echo menu_active(['/pjm/pages/introduction.php','/pjm/pages/galeri.php','/pjm/pages/video.php']); ?>">
+          <a class="nav-link dropdown-toggle <?php echo menu_active(['/pjm/pages/introduction.php','/pjm/pages/galeri.php','/pjm/pages/video.php']); ?>" href="#" id="tentangKamiDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Tentang Kami
           </a>
-          <ul class="dropdown-menu">
-            <li><a href="/pjm/pages/introduction.php">Profil</a></li>
-            <li><a href="/pjm/pages/galeri.php">Galeri</a></li>
-            <li><a href="/pjm/pages/video.php">Video</a></li>
+          <ul class="dropdown-menu" aria-labelledby="tentangKamiDropdown">
+            <li><a class="dropdown-item <?php echo menu_active(['/pjm/pages/introduction.php']); ?>" href="/pjm/pages/introduction.php">Profil</a></li>
+            <li><a class="dropdown-item <?php echo menu_active(['/pjm/pages/galeri.php']); ?>" href="/pjm/pages/galeri.php">Galeri</a></li>
+            <li><a class="dropdown-item <?php echo menu_active(['/pjm/pages/video.php']); ?>" href="/pjm/pages/video.php">Video</a></li>
           </ul>
         </li>
-
-        <!-- Menu Lain -->
-        <li><a href="/pjm/pages/service.php">Layanan</a></li>
-        <li><a href="/pjm/pages/k3-policy.php">K3 Policy</a></li>
-        <li><a href="/pjm/pages/project.php">Proyek</a></li>
-        <li><a href="/pjm/pages/career.php">Lowongan Kerja</a></li>
-        <li><a href="/pjm/pages/contact.php">Kontak</a></li>
-        <li><a href="/pjm/login.php">Login</a></li>
+        <li class="nav-item"><a class="nav-link <?php echo menu_active(['/pjm/pages/service.php']); ?>" href="/pjm/pages/service.php">Layanan</a></li>
+        <li class="nav-item"><a class="nav-link <?php echo menu_active(['/pjm/pages/k3-policy.php']); ?>" href="/pjm/pages/k3-policy.php">K3 Policy</a></li>
+        <li class="nav-item"><a class="nav-link <?php echo menu_active(['/pjm/pages/project.php']); ?>" href="/pjm/pages/project.php">Proyek</a></li>
+        <li class="nav-item"><a class="nav-link <?php echo menu_active(['/pjm/pages/career.php']); ?>" href="/pjm/pages/career.php">Lowongan Kerja</a></li>
+        <li class="nav-item"><a class="nav-link <?php echo menu_active(['/pjm/pages/contact.php']); ?>" href="/pjm/pages/contact.php">Kontak</a></li>
+        <li class="nav-item"><a class="nav-link <?php echo menu_active(['/pjm/login.php']); ?>" href="/pjm/login.php">Login</a></li>
       </ul>
-    </nav>
-    
+    </div>
   </div>
-</header>
+</nav>

@@ -1,5 +1,5 @@
 <?php
-$page_title = 'Lowongan Kerja';
+$page_title = 'Lowongan Kerja - Prohaba Jaya Mandiri';
 $breadcrumb = [
     ['name' => 'Beranda', 'url' => '/pjm/index.php'],
     ['name' => 'Lowongan Kerja']
@@ -23,23 +23,25 @@ ob_start();
   </div>
 </section>
 
-<main class="main">
-
-    <section id="career" class="career section" style="background: linear-gradient(135deg, #f8fafb 0%, #e8f5f1 100%); padding: 3.5rem 0 3rem 0;">
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-lg-8">
-            <div class="card shadow-lg border-0 p-4 p-md-5 rounded-4" data-aos="fade-up">
-              <h2 class="mb-3 fw-bold" style="color: var(--color-primary-dark, #1b3c2e);" data-aos="fade-up">Lowongan Kerja</h2>
-              <p class="lead mb-0" data-aos="fade-up" data-aos-delay="100">
-                Saat ini belum ada lowongan yang tersedia.<br>Silakan periksa kembali halaman ini secara berkala untuk informasi terbaru.
-              </p>
-            </div>
+<main>
+  <section id="career" class="py-5" style="background: linear-gradient(135deg, #f8fafb 0%, #e8f5f1 100%);" data-aos="fade-up">
+    <div class="container">
+      <div class="section-title text-center mb-5" data-aos="fade-up">
+        <h2 class="fw-bold mb-2"><i class="bi bi-briefcase-fill text-primary me-2"></i>Karir di Prohaba Jaya Mandiri</h2>
+        <p class="text-muted">Bergabunglah bersama kami dan wujudkan karir impian Anda di industri konstruksi dan infrastruktur.</p>
+      </div>
+      <div class="row justify-content-center">
+        <div class="col-lg-8">
+          <div class="card shadow-lg border-0 p-4 p-md-5 rounded-4" data-aos="fade-up" data-aos-delay="100">
+            <h3 class="mb-3 fw-bold text-primary">Lowongan Kerja</h3>
+            <p class="lead mb-0">
+              Saat ini belum ada lowongan yang tersedia.<br>Silakan periksa kembali halaman ini secara berkala untuk informasi terbaru.
+            </p>
           </div>
         </div>
       </div>
-    </section>
-
+    </div>
+  </section>
 </main>
 
 <?php

@@ -1,131 +1,41 @@
-  <footer id="footer" class="footer footer-modern position-relative py-3">
-    <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-lg-12" data-aos="fade-up">
-          <div class="card border-0 shadow footer-card p-4 p-md-5 bg-gradient-modern">
-            <div class="d-flex flex-column flex-md-row align-items-stretch justify-content-between gap-4">
-              <!-- About & Contact -->
-              <div class="footer-about flex-fill text-md-start text-center d-flex flex-column justify-content-between">
-                <a href="/pjm/index.php" class="logo d-inline-flex align-items-center mb-2 mb-md-3 justify-content-md-start justify-content-center">
-                  <span class="sitename fs-4 fw-bold text-gradient">Prohaba Jaya Mandiri</span>
-                </a>
-                <div class="footer-contact mb-2 mb-md-3">
-                  <address class="mb-1">JL. MT Haryono Komp. Ruko Tamansari Bukit Mutiara</address>
-                  <address class="mb-1">Blok A1. No. 09 RT.16, Gunung Samarinda Baru,</address>
-                  <address class="mb-1">Balikpapan Utara, Kalimantan Timur 76114</address>
-                  <p class="mb-1"><i class="bi bi-phone me-2" aria-hidden="true"></i><strong class="visually-hidden">Phone:</strong> <a href="tel:0542-873295" class="text-decoration-none text-dark">0542-873295</a></p>
-                  <p class="mb-1"><i class="bi bi-envelope me-2" aria-hidden="true"></i><strong class="visually-hidden">Email:</strong> <a href="mailto:administration@prohaba.co.id" class="text-decoration-none text-dark">administration@prohaba.co.id</a></p>
-                </div>
-                <div class="social-links d-flex justify-content-md-start justify-content-center gap-2 gap-md-3 mt-2">
-                  <a href="https://www.instagram.com/prohabajayamandiri/" class="footer-social-link" aria-label="Instagram" target="_blank" rel="noopener"><i class="bi bi-instagram"></i></a>
-                  <!-- <a href="#" class="footer-social-link" aria-label="Twitter" target="_blank" rel="noopener"><i class="bi bi-twitter"></i></a>
-                  <a href="#" class="footer-social-link" aria-label="Facebook" target="_blank" rel="noopener"><i class="bi bi-facebook"></i></a>
-                  <a href="https://www.instagram.com/prohabajayamandiri/" class="footer-social-link" aria-label="Instagram" target="_blank" rel="noopener"><i class="bi bi-instagram"></i></a>
-                  <a href="#" class="footer-social-link" aria-label="LinkedIn" target="_blank" rel="noopener"><i class="bi bi-linkedin"></i></a> -->
-                  <a href="mailto:prohabajayamandiri@yahoo.com" class="footer-social-link" aria-label="Email"><i class="bi bi-envelope-at"></i></a>
-                </div>
-              </div>
-              <!-- Useful Links -->
-              <div class="footer-links flex-fill text-center text-md-start">
-                <h5 class="fw-semibold mb-3 d-flex align-items-center justify-content-center justify-content-md-start"><i class="bi bi-link-45deg me-2"></i>Useful Links</h5>
-                <ul class="list-unstyled mb-0">
-                  <li><a href="/pjm/index.php" class="footer-link">Beranda</a></li>
-                  <li><a href="/pjm/pages/introduction.php" class="footer-link">Tentang Kami</a></li>
-                  <li><a href="/pjm/pages/service.php" class="footer-link">Layanan</a></li>
-                  <li><a href="/pjm/pages/project.php" class="footer-link">Proyek</a></li>
-                  <li><a href="/pjm/pages/contact.php" class="footer-link">Kontak</a></li>
-                </ul>
-              </div>
-              <!-- Our Services -->
-              <div class="footer-services flex-fill text-center text-md-start">
-                <h5 class="fw-semibold mb-3 d-flex align-items-center justify-content-center justify-content-md-start"><i class="bi bi-tools me-2"></i>Our Services</h5>
-                <ul class="list-unstyled mb-0">
-                  <li><a href="#" class="footer-link">Konstruksi Bangunan</a></li>
-                  <li><a href="#" class="footer-link">Konstruksi Jalan</a></li>
-                  <li><a href="#" class="footer-link">Infrastruktur Listrik</a></li>
-                </ul>
-              </div>
-            </div>
-          </div>
-        </div>
+<footer class="bg-dark text-light border-top border-secondary-subtle mt-5 pt-4 pb-2">
+  <div class="container-xl">
+    <div class="row gy-3 align-items-center">
+      <div class="col-lg-4 text-center text-lg-start mb-3 mb-lg-0">
+        <h6 class="fw-bold mb-2 text-light">Alamat Kantor</h6>
+        <p class="small mb-1">JL. MT Haryono Komp. Ruko Tamansari Bukit Mutiara Blok A1. No. 09 RT.16,<br>Gunung Samarinda Baru, Balikpapan Utara, Kalimantan Timur 76114</p>
+        <p class="small mb-0"><i class="bi bi-geo-alt me-1"></i> Balikpapan, Indonesia</p>
       </div>
+      <div class="col-lg-4 text-center mb-3 mb-lg-0">
+        <h6 class="fw-bold mb-2 text-light">Kontak</h6>
+        <p class="small mb-1"><i class="bi bi-telephone me-1"></i> 0542-873295</p>
+        <p class="small mb-1"><i class="bi bi-envelope me-1"></i> administration@prohaba.co.id</p>
+        <p class="small mb-0"><i class="bi bi-clock me-1"></i> Senin - Jumat: 08.00 - 17.00</p>
       </div>
-      <div class="row">
-        <div class="col-12 text-center">
-          <small class="text-secondary">&copy; <span id="copyright-year"></span> <strong class="sitename">Prohaba Jaya Mandiri</strong> All Rights Reserved. | <span class="text-gradient">Modern Footer UI</span></small>
-        </div>
+      <div class="col-lg-4 text-center text-lg-end">
+        <h6 class="fw-bold mb-2 text-light">Ikuti Kami</h6>
+        <a href="#" class="d-inline-flex align-items-center justify-content-center bg-light bg-opacity-10 rounded-circle me-2 social-icon" style="width:2.2rem;height:2.2rem;"><i class="bi bi-facebook fs-5"></i></a>
+        <a href="#" class="d-inline-flex align-items-center justify-content-center bg-light bg-opacity-10 rounded-circle me-2 social-icon" style="width:2.2rem;height:2.2rem;"><i class="bi bi-instagram fs-5"></i></a>
+        <a href="#" class="d-inline-flex align-items-center justify-content-center bg-light bg-opacity-10 rounded-circle me-2 social-icon" style="width:2.2rem;height:2.2rem;"><i class="bi bi-linkedin fs-5"></i></a>
+        <a href="#" class="d-inline-flex align-items-center justify-content-center bg-light bg-opacity-10 rounded-circle social-icon" style="width:2.2rem;height:2.2rem;"><i class="bi bi-envelope fs-5"></i></a>
       </div>
     </div>
-    <script>
-      document.getElementById('copyright-year').textContent = new Date().getFullYear();
-    </script>
-  </footer>
-
-  <!-- Scroll Top -->
-  <a href="#" id="scroll-top" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
-
-  <!-- Preloader -->
-  <div id="preloader"></div>
-
-  <!-- Vendor JS Files -->
-  <script src="/pjm/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-  <script src="/pjm/assets/vendor/php-email-form/validate.js"></script>
-  <script src="/pjm/assets/vendor/aos/aos.js"></script>
-  <script src="/pjm/assets/vendor/glightbox/js/glightbox.min.js"></script>
-  <script src="/pjm/assets/vendor/purecounter/purecounter_vanilla.js"></script>
-  <script src="/pjm/assets/vendor/swiper/swiper-bundle.min.js"></script>
-  <!-- Isotope JS (CDN since local file missing) -->
-  <script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
-
-  <!-- Slick Carousel JS -->
-  <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-
-  <!-- Main JS File -->
-  <script src="/pjm/assets/js/main.js"></script>
-
-  <script type="text/javascript">
-    $(document).ready(function() {
-      $('.row-berita').slick({
-        slidesToShow: 3,
-        slidesToScroll: 1,
-        autoplay: true,
-        autoplaySpeed: 1200,
-        responsive: [ // Untuk responsivitas
-          {
-            breakpoint: 1400,
-            settings: {
-              slidesToShow: 3
-            }
-          },
-          {
-            breakpoint: 800,
-            settings: {
-              slidesToShow: 1
-            }
-          }
-        ]
-      });
-
-      $('.slider').slick({
-        slidesToShow: 5,
-        slidesToScroll: 1,
-        autoplay: true,
-        autoplaySpeed: 1000,
-        responsive: [ // Untuk responsivitas
-          {
-            breakpoint: 1400,
-            settings: {
-              slidesToShow: 5
-            }
-          },
-          {
-            breakpoint: 800,
-            settings: {
-              slidesToShow: 1
-            }
-          }
-        ]
-      });
-    });
-  </script>
+    <hr class="border-secondary-subtle my-4">
+    <div class="row align-items-center gy-3">
+      <div class="col-md-6 text-center text-md-start mb-2 mb-md-0">
+        <span class="fw-bold">&copy; <?php echo date('Y'); ?> Prohaba Jaya Mandiri</span> &mdash; All rights reserved.
+      </div>
+      <div class="col-md-6 text-center text-md-end">
+        <span class="small">Developed by <a href="https://prohaba.co.id" class="text-light text-decoration-underline">Prohaba IT Team</a></span>
+      </div>
+    </div>
+  </div>
+  <style>
+    .social-icon:hover {
+      background: var(--color-primary, #5fcf80) !important;
+      color: #fff !important;
+      transition: background 0.18s, color 0.18s;
+    }
+    .social-icon i { transition: color 0.18s; }
+  </style>
+</footer>
