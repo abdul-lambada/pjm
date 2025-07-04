@@ -37,7 +37,7 @@ ob_start();
               <i class="bi bi-geo-alt"></i>
             </div>
             <h5 class="fw-semibold mb-1 text-center">Alamat</h5>
-            <p class="small text-center mb-0">JL. MT Haryono Komp. Ruko Tamansari Bukit Mutiara (WIKA) Blok A1. No. 09 RT.16, Gunung Samarinda Baru, Balikpapan Utara, Kalimantan Timur</p>
+            <p class="small text-center mb-0">JL. MT Haryono Komp. Ruko Tamansari Bukit Mutiara Blok A1. No. 09 RT.16, Gunung Samarinda Baru, Balikpapan Utara, Kalimantan Timur 76114</p>
           </div>
           <div class="mb-4">
             <div class="icon-circle bg-primary bg-opacity-10 text-primary mb-3 mx-auto d-flex align-items-center justify-content-center" style="width:56px; height:56px; border-radius:50%; font-size:2rem;">
@@ -51,7 +51,7 @@ ob_start();
               <i class="bi bi-envelope"></i>
             </div>
             <h5 class="fw-semibold mb-1 text-center">Email</h5>
-            <p class="small text-center mb-0">administration@prohabajayagroup.co.id</p>
+            <p class="small text-center mb-0">administration@prohaba.co.id</p>
           </div>
         </div>
       </div>
